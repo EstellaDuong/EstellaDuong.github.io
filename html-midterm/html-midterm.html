@@ -11,7 +11,7 @@
     
     <p>This is a paragraph with mismatched tags and missing closing tags.</p>
     
-    <ol>
+    <ul>
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
@@ -22,7 +22,7 @@
         <li>Item 8</li>
         <li>Item 9</li>
         <li>Item 10</li>
-    </ol>
+    </ul>
 
     <p>This is another paragraph without proper indentation.</p>
     
@@ -63,5 +63,49 @@
         <dt>Descriptive Item Title</dt>
         <dd>Descriptive Item Text</dd>
     </dl>
+
+    <h1>List of errors found:</h1>
+
+    <ol>
+        <li style="margin-bottom: 10px;">Line 1: On the first line, I added <strong>&lt;!DOCTYPE html&gt;</strong> so the browser knows what document type to expect.</li>
+
+        <li style="margin-bottom: 10px;">Line 2: <strong>&lt;html lang="en"&gt;</strong> is in the wrong spot. I deleted it from the header area and replaced the first <strong>&lt;html&gt;</strong> with <strong>&lt;html lang="en"&gt;</strong>.</li>
+
+        <li style="margin-bottom: 10px;">Line 4-5: after the <strong>&lt;head&gt;</strong> tag, I added <strong>&lt;meta charset="UTF-8"&gt;</strong> and <strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</strong>. This lets the browser know the web page's character encoding and allows for the viewport to scale with different devices.</li>
+
+        <li style="margin-bottom: 10px;">Line 7: At the end of the head, it needs a closing tag. I added <strong>&lt;/head&gt;</strong> to fix this.</li>
+
+        <li style="margin-bottom: 10px;">Line 10: The "Welcome to My Error-Filled Page" heading needs a closing tag at the end. I added <strong>&lt;/h1&gt;</strong> to the end of the line.</li>
+
+        <li style="margin-bottom: 10px;">Line 12: The "This is a paragraph with mismatched tags and missing closing tags." text needs an opening tag. I added <strong>&lt;p&gt;</strong> at the beginning of the paragraph to fix this.</li>
+
+        <li style="margin-bottom: 10px;">Line 14-25: The tags opening and closing the list do not match. It must either be an ordered list with <strong>&lt;ol&gt;</strong> or an unordered list with <strong>&lt;ul&gt;</strong>. I changed the tag on line 14 from <strong>&lt;ol&gt;</strong> to <strong>&lt;ul&gt;</strong> to match the <strong>&lt;/ul&gt;</strong> on line 25 to fix this.</li>
+
+        <li style="margin-bottom: 10px;">line 27: The "This is another paragraph without proper indentation." text needs a closing tag. I added <strong>&lt;/p&gt;</strong> to the end to fix this.</li>
+
+        <li style="margin-bottom: 10px;">Line 29: The <strong>&lt;img&gt;</strong> tag needs alternative text. I added <strong>alt="The two states of every programmer meme image"</strong> right before the <strong>&gt;</strong> to fix this. This is necessary to help the visually impaired, to optimize search engines, and to show the text if the image fails to load.</li>
+
+        <li style="margin-bottom: 10px;">Line 31: The link for the "Click me!" text has the incorrect closing tag. I replaced <strong>&lt;/img&gt;</strong> with <strong>&lt;/a&gt;</strong> to fix this.</li>
+
+        <li style="margin-bottom: 10px;">Line 40: The wrong syntax was used for the table data cell element containing "25". It needs a <strong>/</strong> to show that it is a closing tag. I replaced <strong>&lt;td&gt;</strong> with <strong>&lt;/td&gt;</strong> to fix this.</li>
+
+        <li style="margin-bottom: 10px;">Line 46: The table needs a closing tag. I added <strong>&lt;/table&gt;</strong> on line 46 to fix this.</li>
+        
+        <li style="margin-bottom: 10px;">Line 48: The wrong syntax was used for the source of the "error.jpeg" image. To fix this, I replaced <strong>source</strong> with <strong>src</strong>.</li>
+
+        <li style="margin-bottom: 10px;">Line 50: The <strong>&lt;center&gt;</strong> tag is not supported in HTML5. To fix this, I enclosed the "This is centered text." message with a <strong>&lt;p&gt;</strong> tag in the beginning and <strong>&lt;/p&gt;</strong> at the end. Within the opening tag, before the <strong>&gt;</strong>, I added <strong>style="text-align: center;"</strong> to center the text.</li>
+
+        <li style="margin-bottom: 10px;">Line 52: The <strong>bgcolor</strong> attribute is not supported in HTML5. To fix this, I replaced <strong>bgcolor="lightgray"</strong> with <strong>style="background-color: lightgray;"</strong> to properly set the text background to lightgray.</li>
+
+        <li style="margin-bottom: 10px;">Line 56: The comment has not been properly closed, so the rest of the html after line 54 had been commented out. To close the comment, I added <strong>--></strong> to the end of the line.</li>
+
+        <li style="margin-bottom: 10px;">Line 58: The link to go to the top of the page with "Link without closing tag" does not have a closing tag. To fix this, I added <strong>&lt;/a&gt;</strong> to the end;</li>
+
+        <li style="margin-bottom: 10px;">Line 60: The wrong tag was used to underline the text. The <strong>&lt;em&gt;</strong> tag is used to emphasize text with italic. To fix this, I replaced the <strong>&lt;em&gt;</strong> and <strong>&lt;/em&gt;</strong> with <strong>&lt;u&gt;</strong> and <strong>&lt;/u&gt;</strong></li>
+
+        <li style="margin-bottom: 10px;">Line 60: The (now) closing <strong>&lt;/u&gt;</strong> tag (formerly the <strong>&lt;/em&gt;</strong> tag before I corrected it) is in the wrong location after the closing <strong>&lt;/p&gt;</strong> tag. To fix this, I moved the <strong>&lt;/u&gt;</strong> before the <strong>&lt;/p&gt;</strong> so that it is within the paragraph.</li>
+
+        <li style="margin-bottom: 10px;">Line 63-64: The elements for the descriptive list have the incorrect tags. The <strong>&lt;li&gt;</strong> tag is used for ordered or unordered lists, not descriptive lists. To fix this, I replaced the first <strong>&lt;li&gt;</strong> with <strong>&lt;dt&gt;</strong> for the "Descriptive Item Title" and the second <strong>&lt;li&gt;</strong> with <strong>&lt;dd&gt;</strong> for the "Descriptive Item Text".</li>
+    </ol>
 </body>
 </html>
