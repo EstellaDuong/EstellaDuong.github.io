@@ -18,14 +18,14 @@ body {
 
 .logo {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 20px;
+    right: 20px;
 }
 
 .intro {
     position: absolute;
-    bottom: 25px;
-    right: 130px;
+    bottom: 12px;
+    right: 105px;
 }
 
 #gradient {
