@@ -1,0 +1,38 @@
+html {
+    font-family: sans-serif;
+}
+  
+body {
+    margin: 0;
+    background: #ccc;
+}
+
+.container {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    max-width: 960px;
+    background-color: white;
+    margin: 20px auto;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.intro {
+    position: absolute;
+    bottom: 25px;
+    right: 130px;
+}
+
+#gradient {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 220px; 
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.296) 20%, rgb(0,0,0,0));
+}
