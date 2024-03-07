@@ -1,0 +1,133 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 208, 211);
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:25px;
+    background-color: rgb(242, 169, 169);
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(77, 0, 19);
+    font-family: Courier New;
+    padding-top: 3px;
+    transition: color 1s, rotate 1s;
+}
+
+nav a:hover {
+    color: rgb(30, 161, 34);
+    rotate: 360deg; 
+}
+
+
+img {
+    max-width: 60%;
+    padding-top: 10px;
+}
+
+#red-ball{
+    background-color: rgb(246, 126, 150);
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    margin-top: 10px;
+    transition: color 1s, border-radius 1s, width 1s, height 1s;
+}
+
+#red-ball:hover {
+    color: rgb(30, 161, 34);
+    border-radius: 10%;
+    width: 80px;
+    height:80px;
+}
+
+h1 {
+    font-family: Apple Chancery;
+    color: rgb(251, 110, 136);
+    transition: color 1s, font-size 1s;
+}
+
+h1:hover {
+    color: rgb(231, 67, 116);
+    font-size: 40px;
+}
+
+.strawb-border-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation-name: right-strawbs-move;  
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.strawb-border-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation-name: left-strawbs-move;  
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.strawb-border-left img {
+    max-width: 30%;
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-left: auto;
+    /* display: block; */
+}
+
+.strawb-border-right img{
+    max-width: 30%;
+    padding: 0;
+    margin: 0;
+    /* display: block; */
+}
+
+.center-strawbs {
+    display: flex;
+    justify-content: left;
+}
+
+@keyframes left-strawbs-move{
+    from {
+        margin: 0;
+    } 
+
+    50% {
+        margin-right: 10%;
+        margin-left: 0%;
+    }
+    
+    to {
+        margin: 0; 
+    }
+}
+
+@keyframes right-strawbs-move{
+    from {
+        margin: 0;
+    } 
+
+    50% {
+        margin-left: 10%;
+        margin-right: 0%;
+    }
+    
+    to {
+        margin: 0; 
+    }
+}
