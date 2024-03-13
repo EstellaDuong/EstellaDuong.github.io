@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    background-color: white;
+    font: 1.2em / 1.2 Georgia, serif, sans-serif;
+    /* max-width: 1500px; */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    color: rgb(75, 71, 81);
+    text-align: center;
+    font-size: 1.7em;
+    padding-bottom: 25px;
+}
+
+h2 {
+    color: white;
+    /* text-align: center; */
+    font-size: 1.7em;
+    padding-left: 20px;
+    /* padding-top: 2em; */
+    font-weight: lighter;
+    filter: drop-shadow(3px 3px 4px black);
+}
+
+img {
+    max-width: 100%;
+    margin: 0;
+    margin-top: -10px;
+    padding: 0;
+}
+
+hr {
+    border-top: 1px solid rgb(195, 123, 85);
+}
+
+.anchor{
+    display: block;
+    height: 130px; /*same height as header*/
+    margin-top: -130px; /*same height as header*/
+    visibility: hidden;
+}
+
+
+
+/* ///////////////////////////////////
+        NAV BAR / LOGO CSS
+ //////////////////////////////////// */
+
+.logo {
+display: flex;
+padding: 12px 12px;
+margin: 0;
+background-color: #f5f2eb;
+color: #3c3223;
+text-align: center;
+position: sticky;
+top: 0;
+filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.172));
+z-index: 99;
+}
+
+.logo img {
+width: 12%;
+padding: 10px; 
+
+}
+
+nav{
+    justify-content: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+nav a{
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    text-decoration: none;
+    color:rgb(75, 71, 81);
+    padding: 20px;
+    font-size: larger;
+}
+
+
+/* /////////////////////////////////
+        INTRO PARAGRAPH CSS
+ ////////////////////////////////// */
+
+.info-text {
+    padding: 70px 70px;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+}
+
+.info-text p {
+    color: rgb(75, 71, 81);
+    width: 60%;
+    margin: auto; 
+    margin-bottom: 20px;
+}
+
+
+/* /////////////////////////////////////////
+        EVENTS TABLE OF CONTENTS CSS
+ ///////////////////////////////////////// */
+
+  .cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    text-align: center; 
+    padding: 10px;
+    color:rgba(75, 71, 81, 0.683);
+    transition: color 0.5s, border-bottom 0.5s;
+    width: 80%;
+    margin: auto; 
+    padding: 40px 40px;
+    border-top: 1px solid rgb(195, 123, 85);
+  }
+
+.numbers { 
+    width: 50px; 
+    height: 50px;
+    line-height: 50px; 
+    border-radius: 50%; 
+    text-align: center; 
+    background-color: rgb(195, 123, 85);
+    color: white; 
+    margin: auto;
+    margin-right: 25px;
+    aspect-ratio: 1;
+} 
+
+.child1 { 
+    display: flex;
+    text-align: left; 
+} 
+
+.child2 { 
+    text-align: right;
+    color:rgb(75, 71, 81, 0.683);
+} 
+
+.cell a {
+    color:rgb(195, 123, 85);
+    text-decoration: none;
+    padding: 15px;
+    transition: font-weight 0.5s, border-bottom 0.5s, border-top 0.5s;
+}
+
+.cell:hover {
+    border-bottom: 2px solid rgb(195, 123, 85);
+    border-top: 2px solid rgb(195, 123, 85);
+    font-weight: bolder;
+}
+
+
+@media screen and (max-width: 864px) {
+    /* .numbers{
+        max-width: 25px; 
+        max-height: 25px;
+        line-height: 25px; 
+        border-radius: 50%; 
+        text-align: center; 
+        background-color: rgb(195, 123, 85);
+        color: white; 
+        margin-right: 25px;
+        aspect-ratio: 1;
+        font-size: 15px;
+    } */
+}
+
+
+
+/* ///////////////////////
+        CONTAINER CSS
+ /////////////////////// */
+
+.container hr {
+    border-top: 1px solid rgb(195, 123, 85);
+    width: 85.5%;
+    margin: auto;
+}
+
+
+.container {
+    background-color: #f5f2eb;
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+.container h1 {
+    padding-bottom: 35px;
+}
+
+
+/* ///////////////////////////////////
+        CONCERT INFO HEADER CSS
+ //////////////////////////////////// */
+
+.concert-header {
+    background: url(header.jpg) no-repeat center bottom;
+    background-size: cover;
+    background-color: rgb(75, 71, 81);
+    /* height: 6em; */
+    margin: 0;
+    margin-top: 60px;
+    padding: 50px 0;
+}
+
+.concert-header h1 {
+    font-size: 1em;
+    text-align: left;
+    padding-left: 25px;
+    color: rgb(230, 161, 124);
+    filter: drop-shadow(3px 3px 2.5px black);
+}
+
+.concert-header p {
+    color: rgba(255, 255, 255, 0.776);
+    width: 85%;
+    margin: auto; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    /* filter: drop-shadow(3px 3px 2.5px black); */
+}
+
+.black-box {
+    background-color: rgba(0, 0, 0, 0.724);
+    padding: 30px 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+
+/* ///////////////////////////////////
+        CONCERT INFO TABLE CSS
+ //////////////////////////////////// */
+
+.concerts-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto;
+
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+
+    padding: 25px; 
+    width: 90%;
+}
+
+.concerts-cells {
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    padding: 50px;
+    margin: 10px;
+    color:rgba(75, 71, 81, 0.683);
+    box-sizing: border-box;
+    background: #f5f2eb;
+    /* border: 2px dashed rgba(236, 198, 48, 0.5);  */
+  }
+
+  .concerts-cells h1 {
+    padding: 0;
+    margin: 10px;
+    font-size: 1.3em;
+  }
+
+  .concerts-cells ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 0.9em;
+  }
