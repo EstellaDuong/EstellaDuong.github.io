@@ -3,6 +3,7 @@
     padding: 0;
     border: 0;
     outline: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
     /* max-width: 1500px; */
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
   }
 
   h1 {
@@ -32,10 +32,11 @@ h2 {
 }
 
 img {
-    max-width: 100%;
+    max-width: 50%;
     margin: 0;
-    margin-top: -10px;
+    /* margin-top: -10px; */
     padding: 0;
+    margin-left: auto;
 }
 
 hr {
@@ -56,21 +57,22 @@ hr {
  //////////////////////////////////// */
 
 .logo {
-display: flex;
-padding: 12px 12px;
-margin: 0;
-background-color: #f5f2eb;
-color: #3c3223;
-text-align: center;
-position: sticky;
-top: 0;
-filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.172));
-z-index: 99;
+    display: flex;
+    padding: 12px 12px;
+    margin: 0;
+    background-color: #f5f2eb;
+    color: #3c3223;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.172));
+    z-index: 99;
 }
 
 .logo img {
-width: 12%;
-padding: 10px; 
+    width: 6%;
+    padding: 10px; 
+    margin: 0;
 
 }
 
@@ -89,26 +91,124 @@ nav a{
     text-decoration: none;
     color:rgb(75, 71, 81);
     padding: 20px;
-    font-size: larger;
+    font-size: 1.3em;
+    transition: color 0.5s, font-size 0.5s;
 }
 
+nav a:hover{
+    color:rgb(195, 123, 85);
+    font-size: 1.35em;
+}
+
+@media screen and (max-width: 700px) {
+    .logo {
+        padding: 0;
+    }
+    nav a {
+        font-size: 1em;
+    }
+}
+
+/* /////////////////////////////////
+        WELCOME IMAGE CSS
+ ////////////////////////////////// */
+
+.welcome-container{
+    background: url("colorado-symphony.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    display: grid;
+    width: 100%;
+    height: 25em; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation-name: zoom;
+    animation-duration: 45s;
+    animation-delay: 0s;
+    animation-play-state: linear;
+    animation-iteration-count: infinite;
+}
+
+.welcome-container h1 {
+    /* line-height: 5em; */
+    font-size: 5em;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    filter: drop-shadow(3px 3px 2.5px black);
+}
+
+.welcome-container p{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 5px;
+    filter: drop-shadow(4px 4px 5px black);
+}
+
+@media screen and (max-width: 700px) {
+    .welcome-container{
+        height: 10em;
+    }
+
+    .welcome-container h1 {
+        font-size: 2em;
+    }
+    
+    .welcome-container p{
+        font-size: 1em;
+    }
+
+}
+
+@keyframes zoom {
+    0% {
+        background-position: center bottom;
+        background-size: 100%;
+    }
+    50% {
+        background-position: center center;
+        background-size: 150%;
+    }
+    100% {
+        background-position: center bottom;
+        background-size: 100%;
+    }
+}
 
 /* /////////////////////////////////
         INTRO PARAGRAPH CSS
  ////////////////////////////////// */
 
-.info-text {
-    padding: 70px 70px;
+.info-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 100px;
+    padding: 70px 150px;
     margin: 0;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     background-color: white;
 }
 
-.info-text p {
-    color: rgb(75, 71, 81);
-    width: 60%;
-    margin: auto; 
-    margin-bottom: 20px;
+.info-container img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .info-container{
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 30px;
+    }
 }
 
 
@@ -128,6 +228,7 @@ nav a{
     margin: auto; 
     padding: 40px 40px;
     border-top: 1px solid rgb(195, 123, 85);
+    transition: border-bottom 0.5s ease-in-out, border-top 0.5s ease-in-out, font-weight 0.5s ease-in-out;
   }
 
 .numbers { 
@@ -157,29 +258,35 @@ nav a{
     color:rgb(195, 123, 85);
     text-decoration: none;
     padding: 15px;
-    transition: font-weight 0.5s, border-bottom 0.5s, border-top 0.5s;
 }
 
-.cell:hover {
+.cell:hover{
     border-bottom: 2px solid rgb(195, 123, 85);
     border-top: 2px solid rgb(195, 123, 85);
     font-weight: bolder;
 }
 
 
-@media screen and (max-width: 864px) {
-    /* .numbers{
-        max-width: 25px; 
-        max-height: 25px;
-        line-height: 25px; 
-        border-radius: 50%; 
-        text-align: center; 
-        background-color: rgb(195, 123, 85);
-        color: white; 
-        margin-right: 25px;
-        aspect-ratio: 1;
-        font-size: 15px;
-    } */
+@media screen and (max-width: 700px) {
+    .cell{
+        padding: 20px 0px;
+    }
+    .numbers{
+        width: 30px; 
+        height: 30px;
+        line-height: 30px; 
+        margin: auto;
+        margin-right: 0;
+        padding: 4px;
+    }
+
+    .child1{
+        font-size: smaller;
+    }
+
+    .child2{
+        font-size: smaller;
+    }
 }
 
 
@@ -207,6 +314,7 @@ nav a{
 }
 
 
+
 /* ///////////////////////////////////
         CONCERT INFO HEADER CSS
  //////////////////////////////////// */
@@ -217,7 +325,7 @@ nav a{
     background-color: rgb(75, 71, 81);
     /* height: 6em; */
     margin: 0;
-    margin-top: 60px;
+    margin-top: 0px;
     padding: 50px 0;
 }
 
@@ -237,7 +345,6 @@ nav a{
     margin-top: 10px;
     font-family: sans-serif;
     font-weight: lighter;
-    /* filter: drop-shadow(3px 3px 2.5px black); */
 }
 
 .black-box {
@@ -246,6 +353,27 @@ nav a{
     margin-left: 10%;
     margin-right: 10%;
 }
+
+@media screen and (max-width: 700px) {
+    .black-box {
+        padding: 10px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+@media screen and (min-width: 2015px) {
+    .black-box {
+        padding: 50px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .black-box p{
+        font-size: 25px;
+    }
+}
+
 
 
 
@@ -257,14 +385,15 @@ nav a{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-rows: auto;
+    gap: 2em;
 
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
 
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
+    /* justify-content: left; */
+    /* justify-items: center; */
+    /* align-content: space-evenly; */
 
     padding: 25px; 
     width: 90%;
@@ -279,7 +408,6 @@ nav a{
     color:rgba(75, 71, 81, 0.683);
     box-sizing: border-box;
     background: #f5f2eb;
-    /* border: 2px dashed rgba(236, 198, 48, 0.5);  */
   }
 
   .concerts-cells h1 {
@@ -295,3 +423,258 @@ nav a{
     margin-top: 30px;
     font-size: 0.9em;
   }
+
+  .purchase-button{
+    background-color: rgb(230, 161, 124);
+    border-radius: 10px; 
+    width: auto;
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-bottom: 50px;
+    transition: margin-right 0.5s, margin-left 0.5s, padding 0.5s, background-color 0.5s;
+  }
+
+  .purchase-button p{
+    color: black;
+    padding:20px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  .purchase-button:hover{
+    margin-right: 39.5%;
+    margin-left: 39.5%;
+    padding: 3px;
+    background-color: rgb(223, 148, 108);;
+  }
+
+  @media screen and (max-width: 1117px) {
+    .concerts-container{
+        grid-template-columns: 1fr;
+        /* margin-right: 10%;
+        margin-left: 10%;  */
+    }
+
+    .purchase-button{
+        margin-right: 17%;
+        margin-left: 17%;
+    }
+
+    .purchase-button:hover{
+        margin-right: 16.5%;
+        margin-left: 16.5%;
+        padding: 3px;
+        background-color: rgb(223, 148, 108);;
+      }
+
+  }
+
+  /* ///////////////////////////////////
+                FOOTER CSS
+ //////////////////////////////////// */
+
+ .footer{
+    display: flex;
+    gap: 5em;
+    background-color: rgb(75, 71, 81);
+    padding: 50px;
+    padding-bottom: 3.5em;
+ }
+
+ .footer-cell {
+    margin: auto;
+    text-align: left;
+ }
+
+ .social-media-cell {
+    display: grid;
+ }
+
+ .footer a{
+    display: flex;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.776);
+    transition: text-decoration-color 0.5s;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+ .footer h1{
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.776);
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 30px;
+ }
+
+ .footer img{
+    padding-right: 10px;
+    padding: 10px;
+    margin: 0;
+ }
+
+ .footer p{
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.776);
+    font-family: sans-serif;
+    font-weight: lighter;
+    padding: 10px;
+    transition: color 0.5s;
+ }
+
+ .footer p:hover{
+    color: white;
+}
+
+ .fill-svg{
+    filter: invert(94%) sepia(2%) saturate(313%) hue-rotate(357deg) brightness(89%) contrast(96%);
+}
+
+@media screen and (max-width: 700px) {
+    .footer{
+        flex-direction: column;
+        padding: 25px;
+        gap: 2em;
+        padding-bottom: 3em;
+    }
+
+    .footer h1{
+        margin-bottom: 12px;
+    }
+}
+
+
+/* ///////////////////////////////////
+          BACK ARROW CSS
+ //////////////////////////////////// */
+.arrow {
+    padding: 0px;
+    top: 0;
+    margin: 0;
+    position: relative;
+}
+
+.arrow img{
+    margin: 0;
+    padding: 20px;
+    width: 1.5em;
+    transition: width 0.5s;
+
+}
+
+.fill-gray-svg{
+    filter: invert(26%) sepia(9%) saturate(645%) hue-rotate(222deg) brightness(91%) contrast(82%);
+}
+
+.arrow img:hover{
+    width: 1.6em;
+  }
+
+/* ///////////////////////////////////
+          ABOUT PAGE CSS
+ //////////////////////////////////// */
+ .about {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.about p{
+    padding: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.about h1 {
+    padding: 25px;
+    padding-top: 0;
+}
+
+.about img{
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+    .about{
+        padding: 0;
+    }
+    .about p{
+        padding: 20px;
+        margin: 10px;
+    }
+    .about h1 {
+        padding: 25px;
+    }
+}
+@media screen and (min-width: 2015px) {
+    .about{
+        padding: 0;
+    }
+    .about p{
+        padding: 20px;
+        margin: 10px;
+        font-size: 35px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .about h1 {
+        padding: 25px;
+    }
+
+    .about img{
+        max-width: 30%;
+    }
+}
+
+
+
+/* ///////////////////////////////////
+          back to top arrow
+ //////////////////////////////////// */
+ .to-top{
+    background-color: #f5f2eb;
+    height: 3em;
+    width: 3em;
+    line-height: 3em;
+    border: 50%;
+    margin: 1em;
+    border-radius: 50%; 
+    aspect-ratio: 1;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.176));
+
+    clear: both;
+    position:fixed;
+    bottom: 0;
+    overflow: hidden;
+    transition: background-color 0.2s, bottom 0.2s;
+    z-index: 99;
+ }
+
+ .to-top img{
+    rotate: 90deg;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+ }
+
+ .to-top:hover{
+    background-color: #ebe7dc;
+    bottom: 3px;
+ }
+
+ @media screen and (max-width: 700px) {
+    .to-top{
+        height: 2.2em;
+        width: 2.2em;
+        line-height: 2.2em;
+    }
+ }
