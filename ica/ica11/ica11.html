@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function start</title>
+    <style>
+        body{
+            padding: 20px;
+            background-color: beige;
+        }
+      .msgBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 200px;
+        background: #ffffff;
+      }
+
+      .msgBox p {
+        line-height: 1.5;
+        padding: 10px 20px;
+        padding-left: 50px;
+        color: #333;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      
+      .msgBox button {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.1rem;
+        color: #342626;
+      }
+
+      .msgButton{
+        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background-color: rgb(255, 129, 154);
+        box-shadow: 1px 1px 2px darkmagenta;
+        padding: 20px;
+      } 
+
+    </style>
+  </head>
+  <body>
+    <button class="msgButton">Display message box</button>
+
+    <script>
+      function displayMessageBox(msgText, msgType){
+        const body = document.body;
+
+        const panel = document.createElement("div");
+        panel.setAttribute("class", "msgBox");
+        body.appendChild(panel);
+
+        const msg = document.createElement("p");
+        msg.textContent = msgText;
+        panel.appendChild(msg);
+
+        const closeBtn = document.createElement("button");
+        closeBtn.textContent = "x";
+        panel.appendChild(closeBtn);
+
+        closeBtn.addEventListener("click", () =>
+            panel.parentNode.removeChild(panel),
+        );
+
+        if(msgType === "warning"){
+            msg.style.background = "url(warning.png) no-repeat 10px";
+            panel.style.backgroundColor = "#ff6161";
+        }
+        else if(msgType === "chat"){
+            msg.style.background = "url(chat.png) no-repeat 10px";
+            panel.style.backgroundColor = "#b5abff";
+        }
+        else{
+            msg.style.paddingLeft = "20px";
+        }
+      }
+
+      const btn = document.querySelector("button");
+        function userInput(){
+            let text = prompt("Enter a message!");
+            return(text); 
+        }
+        function warningInput(){
+            let text = prompt("Is this a warning or a chat?");
+            return(text); 
+        }        
+
+      btn.addEventListener("click", () => 
+        displayMessageBox(userInput(), warningInput()),
+        );
+    </script>
+  </body>
+</html> 
