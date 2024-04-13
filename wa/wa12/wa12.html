@@ -9,16 +9,15 @@
 </head>
 <body>
     <div class="app">
-        <header>Quote Author Guessing Game</header>
+        <header>Generate Quote by Category</header>
         
         <section class="controls" >
+          <div class="selection">
             <label for="category">Select a category:</label>
             <select name="category" id="category">
-                <option value="javascript" selected>None</option>
-                <!-- <option value="python">Python</option>
-                <option value="c++">C++</option>
-                <option value="java">Java</option> -->
+                <option value="None" selected>None</option>
             </select>
+          </div>
 
             <button type="button" id="js-new-quote" class="new-quote button">
                 Generate a new quote!
@@ -29,21 +28,10 @@
           <div class="quote-text" id="js-quote-text"></div>
           <div class="quote-text" id="js-answer-text"></div>
         </section>
-
         <section class="controls" >
-
-        <h1>Can you guess who said this?</h1>
-        <div>
-            <label for="opt1"> </label><input id="opt1" type="radio" name="guess" value="opt1" checked />
-            <label for="opt2"> </label><input id="opt2" type="radio" name="guess" value="opt2" />
-            <label for="opt3"> </label><input id="opt3" type="radio" name="guess" value="opt3" />
-        </div>
-            
-          
           <button type="button" id="js-tweet" class="twitter button">
-            Show me the answer!
+            Show author
           </button>
-
         </section>
     </div>
       <script src="wa12.js"></script>

@@ -1,6 +1,11 @@
 const quoteBtn = document.querySelector('#js-new-quote');
 quoteBtn.addEventListener('click', quoteByCategory);
 
+let answer = " ";
+const answerText = document.querySelector("#js-answer-text");
+const ansBtn = document.querySelector('#js-tweet');
+ansBtn.addEventListener('click', getAnswer);
+
 const endpoint = "https://api.quotable.io/random";
 
 const tags = "https://api.quotable.io/tags";
@@ -30,15 +35,16 @@ function setCategories(array){
     for(let i=0; i<array.length; i++)
     {
         // console.log("category to add: " + array[i].name);
-        let option = document.createElement("option");
-        option.text = array[i].name;
-        option.value = array[i].name;;
-        dropdown.appendChild(option);  
+        if(array[i].quoteCount > 50)
+        {
+            let option = document.createElement("option");
+            option.text = array[i].name;
+            option.value = array[i].name;
+            dropdown.appendChild(option);  
+        }
     }
 }
 
-const selectedCategory = document.getElementById("category");
-let categoryMatch = false;
 async function getQuote(){
     try {
         const response = await fetch(endpoint);
@@ -47,21 +53,13 @@ async function getQuote(){
         }
 
         const json = await response.json();
-
-        let selectedText = selectedCategory.options[selectedCategory.selectedIndex].text;
-        console.log("category: " + selectedText);
-
-        if(json['tags'][0] === selectedText || selectedText === "None")
-        {
-            categoryMatch = true;
-        }
-        console.log("quote: " + json['content']);
-        console.log("tag: " + json['tags'][0]);
         displayQuote(json['content']);
         
         // console.log(json['author']);
-        // answer = json['author'];
-        // answerText.textContent = " ";
+        answer = json['author'];
+        answerText.textContent = " ";
+
+        return json;
     } catch (err){
         console.log(err);
         alert("Failed to catch new quote.");
@@ -69,60 +67,27 @@ async function getQuote(){
 }
 getQuote();
 
-function quoteByCategory(){
-    while(!categoryMatch)
-    {
-        getQuote();
+const selectedCategory = document.getElementById("category");
+async function quoteByCategory() {
+    let selectedText = selectedCategory.options[selectedCategory.selectedIndex].text;
+    console.log("selected: " + selectedText);
+    let randQuote = await getQuote();
+    console.log("quote: ", randQuote);
+
+    //while loop to set quote according to category
+    while(!randQuote['tags'].includes(selectedText) && selectedText !== "None"){
+        randQuote = await getQuote();
+        console.log("new quote: ", randQuote);
     }
-    categoryMatch = false;
-}
+
+  }
 
 function displayQuote(quote){
     const quoteText = document.querySelector("#js-quote-text");
     quoteText.textContent = quote;
 }
 
-
-
-
-
-
-
-
-
-// const ansBtn = document.querySelector('#js-tweet');
-// ansBtn.addEventListener('click', getAnswer);
-
-// const answerText = document.querySelector("#js-answer-text");
-
-// let answer = " ";
-
-// async function getQuote(){
-//     console.log("new quote clicked");
-//     try {
-//         const response = await fetch(endpoint);
-//         if(!response.ok){
-//             throw Error(response.statusText);
-//         }
-
-//         const json = await response.json();
-//         console.log(json['content']);
-//         displayQuote(json['content']);
-        
-//         console.log(json['author']);
-//         answer = json['author'];
-//         answerText.textContent = " ";
-//     } catch (err){
-//         console.log(err);
-//         alert("Failed to catch new quote.");
-//     }
-// }
-
-
-
-// function getAnswer(){
-//     console.log("answer clicked");
-//     answerText.textContent = answer;
-// }
-
-// getQuote();
+function getAnswer(){
+    console.log("answer clicked");
+    answerText.textContent = "- "+answer;
+}
