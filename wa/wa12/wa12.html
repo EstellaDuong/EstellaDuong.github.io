@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wa12.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <header>Quote Author Guessing Game</header>
+        
+        <section class="controls" >
+            <label for="category">Select a category:</label>
+            <select name="category" id="category">
+                <option value="javascript" selected>None</option>
+                <!-- <option value="python">Python</option>
+                <option value="c++">C++</option>
+                <option value="java">Java</option> -->
+            </select>
+
+            <button type="button" id="js-new-quote" class="new-quote button">
+                Generate a new quote!
+            </button>
+        </section>
+        
+        <section class="quotes">
+          <div class="quote-text" id="js-quote-text"></div>
+          <div class="quote-text" id="js-answer-text"></div>
+        </section>
+
+        <section class="controls" >
+
+        <h1>Can you guess who said this?</h1>
+        <div>
+            <label for="opt1"> </label><input id="opt1" type="radio" name="guess" value="opt1" checked />
+            <label for="opt2"> </label><input id="opt2" type="radio" name="guess" value="opt2" />
+            <label for="opt3"> </label><input id="opt3" type="radio" name="guess" value="opt3" />
+        </div>
+            
+          
+          <button type="button" id="js-tweet" class="twitter button">
+            Show me the answer!
+          </button>
+
+        </section>
+    </div>
+      <script src="wa12.js"></script>
+</body>
+</html>
