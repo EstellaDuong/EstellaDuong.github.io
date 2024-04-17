@@ -64,7 +64,7 @@ class Ball{
                 const distance = Math.sqrt(dx*dx + dy*dy);
 
                 if(distance < this.size + ball.size){
-                    ball.color = this.color = randomRGB();
+                    // ball.color = this.color = randomRGB();
 
                     //code for balls to bounce off each other;
                     ball.velX = random(-10, 10);
