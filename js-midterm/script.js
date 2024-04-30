@@ -24,6 +24,10 @@ const instructionText = document.getElementById("instruction");
 
 let volume = 50; 
 
+// function to generate random number
+function randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 function setIcon(){
     if(decreaseBtn.checked)
@@ -35,10 +39,6 @@ function setIcon(){
         correctCup.textContent = "+";
     }
 }
-
-
-
-
 
 function callShuffle() {
   const numberOfRuns = 10; 
@@ -141,32 +141,34 @@ function setInstruction(){
 
 
 function showAnswer(){
-    console.log("wrong");
-    console.log(shuffleDone);
+    let num = randomNum(0, volumeBar.max);
     if(shuffleDone)
     {
-        instructionText.textContent = "Wrong cup! Click GO to try again.";
+        instructionText.textContent = "Wrong cup! Volume has been set to " + num + ".";
+        volume = num;
+        volumeNumber.textContent = volume;
+        volumeBar.value = volume;
         setIcon();
         shuffleDone = false;
     }
 }
 
 function changeVolume(){
-    console.log("correct");
-    console.log(shuffleDone);
     if(shuffleDone)
     {
-        instructionText.textContent = "Correct! Click GO to adjust the volume again."
+        let num = randomNum(0, 10);
         setIcon();
         shuffleDone = false;
 
         if(decreaseBtn.checked && volume>0)
         {
-            volume--;
+            volume -= num;
+            instructionText.textContent = "Volume decreased by " + num + "! Click GO to adjust the volume again."
         }
         else if(increaseBtn.checked && volume<100)
         {
-            volume++;
+            volume += num;
+            instructionText.textContent = "Volume increased by " + num + "! Click GO to adjust the volume again."
         }
         volumeNumber.textContent = volume;
         volumeBar.value = volume;
