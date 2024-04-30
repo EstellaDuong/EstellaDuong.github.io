@@ -141,9 +141,17 @@ function setInstruction(){
 
 
 function showAnswer(){
-    let num = randomNum(0, volumeBar.max);
+    let num = 0;
     if(shuffleDone)
     {
+        if(decreaseBtn.checked && volume>0)
+        {
+            num = randomNum(volume+1, volumeBar.max);
+        }
+        else if(increaseBtn.checked && volume<100)
+        {
+            num = randomNum(0, volume-1);
+        }
         instructionText.textContent = "Wrong cup! Volume has been set to " + num + ".";
         volume = num;
         volumeNumber.textContent = volume;
@@ -156,7 +164,7 @@ function showAnswer(){
 function changeVolume(){
     if(shuffleDone)
     {
-        let num = randomNum(0, 10);
+        let num = randomNum(1, 10);
         setIcon();
         shuffleDone = false;
 
