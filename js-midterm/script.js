@@ -23,6 +23,8 @@ let shuffleDone = false;
 const instructionText = document.getElementById("instruction");
 
 let volume = 50; 
+let maxCups = 15;
+let numCups = 4; 
 
 // function to generate random number
 function randomNum(min, max) {
@@ -46,13 +48,16 @@ function callShuffle() {
   // Use a promise to coordinate the shuffling and displaying of the message
   const shufflingPromise = new Promise((resolve) => {
     function runFlipFuncSequentially(count) {
-      if (count < numberOfRuns) {
+      if (count < numberOfRuns) 
+      {
         setTimeout(function () {
           shuffleList(() => {
             runFlipFuncSequentially(count + 1);
           });
         }, delayBetweenRuns);
-      } else {
+      } 
+      else 
+      {
         // Resolve the promise when all shuffling iterations are complete
         resolve();
       }
@@ -130,55 +135,98 @@ function swapCups(){
     instructionText.textContent = "Keep track of the cups!";
     shuffleList();
     setTimeout(() => shuffleList(), 900);
-    setTimeout(() => shuffleList(), 1800);
-    shuffleDone = true; 
+    setTimeout(() => shuffleList(), 1800); 
     setTimeout(() => setInstruction(), 2700);
 }
 
 function setInstruction(){
     instructionText.textContent = "Click the cup with the icon."
+    shuffleDone = true;
 }
 
 
 function showAnswer(){
-    let num = 0;
-    if(shuffleDone)
-    {
-        if(decreaseBtn.checked && volume>0)
-        {
-            num = randomNum(volume+1, volumeBar.max);
+    if(shuffleDone){
+        shuffleDone = false;
+        setIcon();
+        if(numCups<maxCups){
+            let newCup = document.createElement('div');
+            numCups++;
+            newCup.className = "item";
+            newCup.id = "list" + numCups;
+            newCup.style.opacity = 0;
+            newCup.addEventListener("click", showAnswer);
+            // newList.appendChild(newCup);
+            insertFadeIn(newCup, 200);
+            instructionText.textContent = "Wrong!! Another cup has been added.";
         }
-        else if(increaseBtn.checked && volume<100)
-        {
-            num = randomNum(0, volume-1);
+        else{
+            instructionText.textContent = "Wrong!!!";
         }
-        instructionText.textContent = "Wrong cup! Volume has been set to " + num + ".";
+        
         volume = num;
         volumeNumber.textContent = volume;
         volumeBar.value = volume;
         setIcon();
-        shuffleDone = false;
     }
 }
 
 function changeVolume(){
     if(shuffleDone)
     {
+        shuffleDone = false;
         let num = randomNum(1, 10);
         setIcon();
-        shuffleDone = false;
 
-        if(decreaseBtn.checked && volume>0)
+        if(decreaseBtn.checked && volume>=0)
         {
+            if(volume-num < 0)
+            {
+                num = volume; 
+            }
             volume -= num;
             instructionText.textContent = "Volume decreased by " + num + "! Click GO to adjust the volume again."
         }
-        else if(increaseBtn.checked && volume<100)
+        else if(increaseBtn.checked && volume<=100)
         {
+            if(volume+num > 100)
+            {
+                num = 100-volume; 
+            }
             volume += num;
             instructionText.textContent = "Volume increased by " + num + "! Click GO to adjust the volume again."
         }
         volumeNumber.textContent = volume;
         volumeBar.value = volume;
+
+
+        if(numCups>4)
+        {
+            const deleteCup = document.getElementById("list" + numCups);
+            removeFadeOut(deleteCup, 800);
+            numCups--;
+        }
     }
 }
+
+function removeFadeOut( item, speed ) {
+    var seconds = speed/1000;
+    item.style.transition = "opacity "+seconds+"s ease";
+
+    item.style.opacity = 0;
+    setTimeout(function() {
+        item.parentNode.removeChild(item);
+    }, speed);
+}
+
+function insertFadeIn( item, speed ) {
+    var seconds = speed/1000;
+    newList.appendChild(item);
+    setTimeout(function() {
+        item.style.transition = "opacity "+seconds+"s ease";
+
+        item.style.opacity = 100;
+    }, speed);
+}
+
+
