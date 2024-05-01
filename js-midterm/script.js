@@ -1,18 +1,18 @@
-const itemList = document.getElementById("newList");
-let children = Array.from(itemList.children); // Initialize children array
+const cupList = document.getElementById("cups");
+let children = Array.from(cupList.children); // array of cups
 
 const decreaseBtn = document.getElementById("decrease");
 decreaseBtn.addEventListener('click', setIcon);
 const increaseBtn = document.getElementById("increase");
 increaseBtn.addEventListener('click', setIcon);
 
-const correctCup = document.getElementById("list1");
+const correctCup = document.getElementById("cup1");
 correctCup.addEventListener("click", changeVolume);
-const cup2 = document.getElementById("list2");
+const cup2 = document.getElementById("cup2");
 cup2.addEventListener("click", showAnswer);
-const cup3 = document.getElementById("list3");
+const cup3 = document.getElementById("cup3");
 cup3.addEventListener("click", showAnswer);
-const cup4 = document.getElementById("list4");
+const cup4 = document.getElementById("cup4");
 cup4.addEventListener("click", showAnswer);
 
 const volumeNumber = document.getElementById("volume-num");
@@ -32,32 +32,28 @@ function randomNum(min, max) {
   }
 
 function setIcon(){
-    if(decreaseBtn.checked)
-    {
+    if(decreaseBtn.checked){
         correctCup.textContent = "-";
     }
-    if(increaseBtn.checked)
-    {
+    if(increaseBtn.checked){
         correctCup.textContent = "+";
     }
 }
 
 function callShuffle() {
   const numberOfRuns = 10; 
-  const delayBetweenRuns = 660; // Delay in milliseconds (0.5 seconds)
-  // Use a promise to coordinate the shuffling and displaying of the message
+  const delayBetweenRuns = 660; // Delay in milliseconds
+  //promise to coordinate the shuffling and displaying of the message
   const shufflingPromise = new Promise((resolve) => {
     function runFlipFuncSequentially(count) {
-      if (count < numberOfRuns) 
-      {
+      if (count < numberOfRuns) {
         setTimeout(function () {
           shuffleList(() => {
             runFlipFuncSequentially(count + 1);
           });
         }, delayBetweenRuns);
       } 
-      else 
-      {
+      else {
         // Resolve the promise when all shuffling iterations are complete
         resolve();
       }
@@ -68,8 +64,8 @@ function callShuffle() {
 }
 
 function shuffleList(callback) {
-  const itemList = document.getElementById("newList");
-  let children = Array.from(itemList.children);
+  const cupList = document.getElementById("cups");
+  let children = Array.from(cupList.children);
   const keys = {}; // Reset keys object for each click
 
   // Store item elements' id and boundingClientRect
@@ -78,13 +74,13 @@ function shuffleList(callback) {
   });
 
   // Shuffle elements
-  children = shuffleArray(Array.from(itemList.children));
+  children = shuffleArray(Array.from(cupList.children));
   children.forEach((elm) => {
-    itemList.appendChild(elm);
+    cupList.appendChild(elm);
   });
 
-  // Apply animations
-  Array.from(itemList.children).forEach((elm) => {
+  // animations
+  Array.from(cupList.children).forEach((elm) => {
     const first = keys[elm.id];
     const last = elm.getBoundingClientRect();
 
@@ -127,7 +123,7 @@ function shuffleArray(array) {
   return array;
 }
 
-const goBtn = document.getElementById("go")
+const goBtn = document.getElementById("go");
 goBtn.addEventListener("click", swapCups);
 
 function swapCups(){
@@ -153,10 +149,9 @@ function showAnswer(){
             let newCup = document.createElement('div');
             numCups++;
             newCup.className = "item";
-            newCup.id = "list" + numCups;
+            newCup.id = "cup" + numCups;
             newCup.style.opacity = 0;
             newCup.addEventListener("click", showAnswer);
-            // newList.appendChild(newCup);
             insertFadeIn(newCup, 200);
             instructionText.textContent = "Wrong!! Another cup has been added.";
         }
@@ -172,25 +167,20 @@ function showAnswer(){
 }
 
 function changeVolume(){
-    if(shuffleDone)
-    {
+    if(shuffleDone){
         shuffleDone = false;
         let num = randomNum(1, 10);
         setIcon();
 
-        if(decreaseBtn.checked && volume>=0)
-        {
-            if(volume-num < 0)
-            {
+        if(decreaseBtn.checked && volume>=0){
+            if(volume-num < 0){
                 num = volume; 
             }
             volume -= num;
             instructionText.textContent = "Volume decreased by " + num + "! Click GO to adjust the volume again."
         }
-        else if(increaseBtn.checked && volume<=100)
-        {
-            if(volume+num > 100)
-            {
+        else if(increaseBtn.checked && volume<=100){
+            if(volume+num > 100){
                 num = 100-volume; 
             }
             volume += num;
@@ -200,9 +190,8 @@ function changeVolume(){
         volumeBar.value = volume;
 
 
-        if(numCups>4)
-        {
-            const deleteCup = document.getElementById("list" + numCups);
+        if(numCups>4){
+            const deleteCup = document.getElementById("cup" + numCups);
             removeFadeOut(deleteCup, 800);
             numCups--;
         }
@@ -221,7 +210,7 @@ function removeFadeOut( item, speed ) {
 
 function insertFadeIn( item, speed ) {
     var seconds = speed/1000;
-    newList.appendChild(item);
+    cups.appendChild(item);
     setTimeout(function() {
         item.style.transition = "opacity "+seconds+"s ease";
 

@@ -88,7 +88,7 @@ progress[value]::-moz-progress-bar {
   text-align: center;
 }
 
-#newList {
+#cups {
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: space-between;
