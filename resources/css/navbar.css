@@ -1,0 +1,221 @@
+/* NAV BAR */
+.nav-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 30px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 30;
+}
+
+.panel-logo {
+    margin-bottom: 60px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.navbar-top {
+    display: none; /* hidden on desktop */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #0B0D2B;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #4a6fa5;
+}
+
+.navbar-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.navbar-footer a {
+    color: #4a6fa5;
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.navbar-footer a:hover {
+    color: #0B0D2B;
+}
+
+.navbar-footer-icons {
+    display: flex;
+    gap: 18px;
+}
+
+.navbar-footer-icons a {
+    font-size: 20px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #0B0D2B;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Dimming overlay, hidden until menu opens */
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 20;
+}
+
+.nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-left: 0px;
+        padding-top: 64px;
+    }
+
+    .navbar-top {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        padding: 0 20px 0 64px; /* reserves space on the left for the hamburger */
+        background-color: #ffffff;
+        z-index: 15;
+        transition: opacity 0.2s ease;
+        box-sizing: border-box;
+    }
+    
+    .navbar-top.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .navbar-top .logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .navbar-top .logo img {
+        height: 42px;
+        width: auto;
+        display: block;
+    }
+
+    .navbar-top,
+    .hamburger {
+        transition: transform 0.3s ease, opacity 0.2s ease;
+    }
+
+    .navbar-top.scroll-hidden {
+        transform: translateY(-100%);
+    }
+
+    .hamburger.scroll-hidden {
+        transform: translateY(-80px);
+    }
+
+    /* Hamburger: independent, fixed, always on top regardless of panel state */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: fixed;
+        top: 23px;
+        left: 20px;
+        z-index: 50;
+    }
+
+    .nav-panel {
+        width: 85%;
+        max-width: 320px;
+        padding: 70px 30px 40px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+        z-index: 40;
+    }
+
+    .nav-panel.open {
+        transform: translateX(0);
+    }
+
+    .panel-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .nav-links {
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .navbar-footer {
+        gap: 25px;
+    }
+}

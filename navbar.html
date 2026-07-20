@@ -1,16 +1,51 @@
-<header>
-    <nav class="navbar">
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="projects.html">PROJECTS</a></li>
-        </ul>
+<head>
+    <link rel="icon" type="png" href="/resources/img/logo.png">
+    <link rel="stylesheet" href="/resources/css/navbar.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <script src="https://kit.fontawesome.com/516ea5d673.js" crossorigin="anonymous"></script>
+</head>
+
+<nav class="navbar">
+    <div class="navbar-top" id="navbar-top">
         <div class="logo">
-            <h1><a href="index.html">Estella Duong</a></h1>
+            <a href="index.html">
+                <img src="/resources/img/logo.png" alt="Estella Duong">
+            </a>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-</header>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="nav-panel" id="nav-panel">
+        <div class="logo panel-logo">
+            <a href="index.html">
+                <img src="/resources/img/logo.png" alt="Estella Duong">
+            </a>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="illustration.html">Illustration</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="navbar-footer">
+            <a href="mailto:estelladuong@gmail.com" target="_blank">EstellaDuong@gmail.com</a>
+            <a href="/resources/files/Estella_Duong_Resume.pdf" download="Estella_Duong_Resume.pdf">Download Resume</a>
+            <div class="navbar-footer-icons">
+                <a href="https://www.instagram.com/estereggz/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/EstellaDuong" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay"></div>

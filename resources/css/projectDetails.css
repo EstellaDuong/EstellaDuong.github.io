@@ -7,13 +7,7 @@
 }
 
 .project-details-container {
-    /* max-width: 1000px; */
     margin: 0 auto;
-    /* padding: 3rem 1.5rem; */
-    /* background-color: white;
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 1rem auto; */
 }
 
 
@@ -21,7 +15,6 @@
 .project-details-container h1 {
     margin-bottom: 1.5rem;
     color: black;
-    /* text-align: left; */
 }
 
 .project-details-container p {
@@ -70,7 +63,6 @@
 
 .project-writeup {
     margin: 2.5rem auto;
-    /* padding: 0 1.5rem 4rem 1.5rem; */
 }
 
 .writeup-section {

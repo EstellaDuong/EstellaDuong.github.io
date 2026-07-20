@@ -1,25 +1,69 @@
+// fetch('navbar.html')
+//           .then(response => response.text())
+//           .then(data => {
+//             document.getElementById('navbar-placeholder').innerHTML = data;
+
+//         //navbar hamburger
+//         const hamburger = document.getElementById('hamburger');
+//         const navLinks = document.getElementById('nav-links');
+
+//         hamburger?.addEventListener('click', () => {
+//             hamburger.classList.toggle('open');
+//             navLinks.classList.toggle('open');
+//         });
+// });
+
+// fetch('footer.html')
+//           .then(response => response.text())
+//           .then(data => {
+//             document.getElementById('footer-placeholder').innerHTML = data;
+// });
 fetch('navbar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
 
-        //navbar hamburger
         const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
+        const navPanel = document.getElementById('nav-panel');
+        const navOverlay = document.getElementById('nav-overlay');
+        const navbarTop = document.getElementById('navbar-top');
 
-        hamburger?.addEventListener('click', () => {
+        function toggleMenu() {
             hamburger.classList.toggle('open');
-            navLinks.classList.toggle('open');
+            navPanel.classList.toggle('open');
+            navOverlay.classList.toggle('open');
+            navbarTop.classList.toggle('hidden');
+        }
+
+        hamburger?.addEventListener('click', toggleMenu);
+        navOverlay?.addEventListener('click', toggleMenu);
+
+        // Hide navbar on scroll down, reveal on scroll up
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            const menuIsOpen = navPanel.classList.contains('open');
+
+            if (!menuIsOpen) {
+                if (currentScrollY > lastScrollY && currentScrollY > 64) {
+                    navbarTop.classList.add('scroll-hidden');
+                    hamburger.classList.add('scroll-hidden');
+                } else {
+                    navbarTop.classList.remove('scroll-hidden');
+                    hamburger.classList.remove('scroll-hidden');
+                }
+            }
+
+            lastScrollY = currentScrollY;
         });
+    });
+
+    
+//scrolls to content on home page 
+document.getElementById('scroll-down-btn')?.addEventListener('click', () => {
+    document.querySelector('.intro-container').scrollIntoView({ behavior: 'smooth' });
 });
-
-fetch('footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-});
-
-
 
 
 //projects list
