@@ -56,7 +56,6 @@
     width: 60px;
     height: 60px;
     font-size: 2rem;
-    cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -197,7 +196,6 @@
     height: 40px;
     border-radius: 50%;
     font-size: 1.5rem;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,7 +212,6 @@
 
 .carousel-arrow:disabled {
     opacity: 0.3;
-    cursor: default;
     box-shadow: none;
 }
 
@@ -247,18 +244,14 @@
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    cursor: pointer;
     height: 600px;
     overflow: hidden;
 }
 
 .single-image-track .illustration-item {
     flex: 1 0 0;
-    cursor: pointer;
     overflow: hidden;
     border-radius: 5px;
-    transition: transform 0.3s ease;
-
 }
 
 .single-image-track img {
@@ -266,11 +259,13 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
 }
 
-.single-image-track:hover .illustration-item {
-    transform: scale(1.04);
+.illustration-item:hover img {
+    transform: scale(1.06);
 }
+
 
 .lightbox {
     position: fixed;
@@ -300,7 +295,6 @@
     border: none;
     color: white;
     font-size: 2.5rem;
-    cursor: pointer;
 }
 
 .lightbox-arrow {
@@ -311,7 +305,6 @@
     border: none;
     color: white;
     font-size: 3rem;
-    cursor: pointer;
 }
 
 .lightbox-arrow.left { left: 30px; }
