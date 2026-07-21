@@ -14,16 +14,42 @@ const illustrations = [
     'resources/illustrations/frieren.jpeg',
 ];
 
+illustrations.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
+
 let currentIndex = 0;
 const track = document.getElementById('illustration-track');
 const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
+const lightboxImgA = document.getElementById('lightbox-img-a');
+const lightboxImgB = document.getElementById('lightbox-img-b');
+let showingA = true;
 
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && lightbox?.classList.contains('open')) {
-        lightbox.classList.remove('open');
-    }
-});
+// Crossfades to a new image inside the lightbox. Both <img> elements sit
+// stacked on top of each other via CSS; this swaps which one is "active"
+// (opacity: 1) so the old and new images fade simultaneously, with no gap.
+function setLightboxImage(src) {
+    if (!lightboxImgA || !lightboxImgB) return;
+
+    const current = showingA ? lightboxImgA : lightboxImgB;
+    const next = showingA ? lightboxImgB : lightboxImgA;
+
+    const preloader = new Image();
+    preloader.onload = () => {
+        next.src = src;
+        next.classList.add('active');
+        current.classList.remove('active');
+        showingA = !showingA;
+    };
+    preloader.src = src;
+}
+
+function openLightbox(index) {
+    currentIndex = index;
+    setLightboxImage(illustrations[currentIndex]);
+    lightbox?.classList.add('open');
+}
 
 function getVisibleCount() {
     return window.innerWidth <= 600 ? 1 : 3;
@@ -47,10 +73,16 @@ function navigate(direction) {
     currentIndex = (currentIndex + direction + illustrations.length) % illustrations.length;
     renderTrack();
 
-    if (lightbox && lightbox.classList.contains('open')) {
-        lightboxImg.src = illustrations[currentIndex];
+    if (lightbox?.classList.contains('open')) {
+        setLightboxImage(illustrations[currentIndex]);
     }
 }
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lightbox?.classList.contains('open')) {
+        lightbox.classList.remove('open');
+    }
+});
 
 // Mini-carousel track click (only exists on pages with #illustration-track, e.g. home page)
 if (track) {
@@ -59,15 +91,30 @@ if (track) {
         if (!item) return;
 
         const clickedOffset = parseInt(item.dataset.index);
-        currentIndex = (currentIndex + clickedOffset) % illustrations.length;
-        lightboxImg.src = illustrations[currentIndex];
-        lightbox.classList.add('open');
+        openLightbox((currentIndex + clickedOffset) % illustrations.length);
     });
 }
 
 // Mini-carousel arrows (only exist alongside #illustration-track)
 document.getElementById('illustration-prev')?.addEventListener('click', () => navigate(-1));
 document.getElementById('illustration-next')?.addEventListener('click', () => navigate(1));
+
+// Full gallery grid click (only exists on illustration.html)
+const galleryEl = document.getElementById('illustration-gallery');
+if (galleryEl) {
+    galleryEl.innerHTML = illustrations
+        .map((src, i) => `
+            <div class="gallery-item" data-index="${i}">
+                <img src="${src}" alt="Illustration">
+            </div>
+        `).join('');
+
+    galleryEl.addEventListener('click', e => {
+        const item = e.target.closest('.gallery-item');
+        if (!item) return;
+        openLightbox(parseInt(item.dataset.index));
+    });
+}
 
 // Lightbox controls — these exist on ANY page with a lightbox (home + illustration gallery),
 // so they're wired up independently of whether the mini-carousel track exists.
