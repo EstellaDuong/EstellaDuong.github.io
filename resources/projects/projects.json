@@ -5,7 +5,7 @@
       "thumbnail": "/resources/projects/Datura/daturaThumbnail.png",
       "photo": "/resources/projects/Datura/daturaMain.png",
       "video": "/resources/projects/Datura/daturaVideo.mp4",
-      "link": "projectDetails.html?project=0",
+      "link": "projectDetails/Datura.html?project=0",
       "externalLinks": [
         { "label": "GitHub", "url": "https://github.com/jtghchau/Datura" },
         { "label": "Visit Datura's Live Site", "url": "https://datura.onrender.com/" }

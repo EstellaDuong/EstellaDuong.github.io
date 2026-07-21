@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/516ea5d673.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/resources/css/navbar.css">
     <link rel="stylesheet" href="/resources/css/style.css">
+    <link rel="stylesheet" href="/resources/css/home.css">
     <link rel="stylesheet" href="/resources/css/illustration.css">
 </head>
 
@@ -17,9 +18,21 @@
     <main>
         <h1>ILLUSTRATION</h1>
 
+        <div class="illustration-gallery" id="illustration-gallery"></div>
     </main>
 
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-arrow left" id="lightbox-prev">&#8249;</button>
+        <img src="" alt="" id="lightbox-img">
+        <button class="lightbox-arrow right" id="lightbox-next">&#8250;</button>
+    </div>
+
+    <script src="/resources/js/carousels.js"></script>
     <script src="/resources/js/script.js"></script>
+    <script src="/resources/js/illustration.js"></script>
+    
+    
     
 </body>
 </html>

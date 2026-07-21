@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJECTS | Estella's Portfolio</title>
-    <link rel="icon" type="png" href="/resources/img/logo.png">
+    <title>DATURA | Estella's Portfolio</title>
+    <link rel="icon" type="png" href="../resources/img/logo.png">
     <script src="https://kit.fontawesome.com/516ea5d673.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/resources/css/navbar.css">
-    <link rel="stylesheet" href="/resources/css/style.css">
-    <link rel="stylesheet" href="/resources/css/projectDetails.css">
+    <link rel="stylesheet" href="../resources/css/navbar.css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="../resources/css/projectDetails.css">
 </head>
 
 <body>
     <div id="navbar-placeholder"></div>
 
     <main>
+    <button class="back-button" onclick="history.back()" aria-label="Go back">
+    <i class="fa-solid fa-arrow-left"></i>
+    </button>
     <div class="project-content-container">
 
         <div class="project-details-container">
@@ -35,7 +38,7 @@
 
             <div class="writeup-section">
                 <h2>Summary</h2>
-                <p>Datura is a full-stack study tracker app I built with a five-person team over six weeks for my Software Development class, inspired by the very real struggle of staying focused as a student. We designed it as an all-in-one space to track study sessions, compete with friends, and stay motivated, complete with a customizable avatar to give the app a more playful, engaging feel. On the technical side, we planned with user stories and wireframes, then built the app using Node.js, Express, PostgreSQL, and Handlebars, with Mocha/Chai tests to make sure core features like authentication worked reliably. Users can time themselves and log study sessions, track their progress, and compete with friends, giving it a competitive edge. This app ended up being a mix of clean functionality and personality, which made it feel like a fun tool you actually want to come back to.</p>
+                <p>Datura is a full-stack study tracker app I built with a five-person team over six weeks for my Software Development class, inspired by the very real struggle of staying focused as a student. We designed it as an all-in-one space to track study sessions, compete with friends, and stay motivated, complete with a customizable avatar to give the app a more playful feel. On the technical side, we planned with user stories and wireframes, then built the app using Node.js, Express, PostgreSQL, and Handlebars, with Mocha/Chai tests to make sure core features like authentication worked reliably. Users can time themselves and log study sessions, track their progress, and compete with friends, giving it a competitive edge. This app ended up being a mix of clean functionality and personality, which made it feel like a fun tool you actually want to come back to.</p>
             </div>
         
             <div class="writeup-section">
@@ -76,7 +79,7 @@
                 <p>If there's one piece of advice I'd give someone building something similar, it's to design your database like you expect the project to grow beyond your original idea, even if you think it won't. Most of our friction came from features we didn't anticipate early on, and that's where we lost time having to adjust instead of moving forward.</p>
             </div>
 
-            <a href="projects.html" class="button">
+            <a href="/projects.html" class="button">
                 View All Projects</a>
         
         </div>
