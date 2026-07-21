@@ -1,8 +1,8 @@
 .project-content-container {
     background-color: white;
     max-width: 1000px;
-    border-radius: 10px;
-    padding: 3rem 6%;
+    border-radius: var(--image-border-radius);
+    padding: 0 6% 2rem 6%;
     margin: 1rem auto;
 }
 
@@ -13,8 +13,12 @@
 
 
 .project-details-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
     margin-bottom: 1.5rem;
     color: black;
+    background-image: none;
+    padding: 0;
 }
 
 .project-details-container p {
@@ -33,10 +37,10 @@
     display: inline-block;
     text-decoration: none;
     padding: 0.5rem 1.25rem;
-    border: 2px solid #044387;
+    border: 2px solid var(--color-dark-periwinkle);
     border-radius: 20px;
     font-size: 0.9rem;
-    color: #044387;
+    color: var(--color-dark-periwinkle);
 }
 
 .project-external-link:hover {
@@ -47,13 +51,13 @@
     display: block;
     width: auto;
     max-height: 500px;
-    border-radius: 10px;
+    border-radius: var(--image-border-radius);
     margin: 0 auto 2rem auto;
 }
 
 .project-details-video {
     width: 100%;
-    border-radius: 10px;
+    border-radius: var(--image-border-radius);
 }
 
 
@@ -71,7 +75,7 @@
 
 .project-content-container h2 {
     margin-bottom: 1rem;
-    color:#044387; 
+    color:var(--color-dark-blue); 
 }
 
 .writeup-section p {
@@ -93,7 +97,7 @@
 
 .writeup-photo-pair img {
     width: calc(50% - 0.5rem);
-    border-radius: 10px;
+    border-radius: var(--image-border-radius);
     object-fit: cover;
 }
 

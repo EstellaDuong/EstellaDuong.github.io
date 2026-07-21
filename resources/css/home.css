@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background-color: #0B0D2B;
+    background-color: var(--color-black-blue);
     background-image: url('../img/nightSky.png');
     background-size: cover;
     background-position: center;
@@ -13,13 +13,31 @@
     justify-content: center;
 }
 
+.hero h1 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: none;
+}
+
+.hero-clouds-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/back_clouds.png') repeat-x;
+    background-size: auto 100%;
+    animation: slide 280s linear infinite;
+    pointer-events: none;
+}
+
 .hero-clouds {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../img/nightClouds.png') repeat-x;
+    background: url('../img/front_clouds.png') repeat-x;
     background-size: auto 100%;
     animation: slide 150s linear infinite;
     pointer-events: none;
@@ -44,8 +62,8 @@
     font-size: 1rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #b3d8ff;
-    margin-top: 10px;
+    color: var(--color-light-blue);
+    margin-top: 0px;
 }
 
 .scroll-down-btn {
@@ -56,6 +74,7 @@
     width: 60px;
     height: 60px;
     font-size: 2rem;
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +83,7 @@
 }
 
 .scroll-down-btn:hover {
-    color: #b3d8ff;
+    color: var(--color-light-blue);
 }
 
 @keyframes bounce {
@@ -96,8 +115,9 @@
 }
 
 .intro-image {
-    width: 250px;
-    height: 250px;
+    max-width: 260px;
+    min-width: 160px;
+    max-height: 250px;
     object-fit: cover;
     overflow: hidden;
     /* border-radius: 50%; */
@@ -108,17 +128,17 @@
 }
 
 .intro-container p{
-    color: #0B0D2B;
+    color: var(--color-black-blue);
 }
 
 
 
 
-
+/* PROJECTS CAROUSEL */
 .carousel-section {
     max-width: 1200px;
     width: 100%;
-    margin: 4rem auto;
+    margin: 2rem auto 7rem auto;
     padding: 0 1.5rem;
 }
 
@@ -127,7 +147,7 @@
     margin-bottom: 25px;
     font-size: 1.8rem;
     letter-spacing: 0.5px;
-    color: #0B0D2B;
+    color: var(--color-black-blue);
 }
 
 .carousel-container {
@@ -147,7 +167,7 @@
     flex: 1 0 0;
     background: #ffffff;
     border: 1px solid #e8e8e8;
-    border-radius: 5px;
+    border-radius: var(--image-border-radius);
     text-decoration: none;
     color: inherit;
     overflow: hidden;
@@ -196,11 +216,12 @@
     height: 40px;
     border-radius: 50%;
     font-size: 1.5rem;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color: #0B0D2B;
+    color: var(--color-black-blue);
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -212,6 +233,7 @@
 
 .carousel-arrow:disabled {
     opacity: 0.3;
+    cursor: default;
     box-shadow: none;
 }
 
@@ -226,12 +248,12 @@
     font-weight: 500;
     letter-spacing: 0.3px;
     color: white;
-    background-color: #0B0D2B;
+    background-color: var(--color-black-blue);
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .view-all-button:hover {
-    background-color: #59728e;
+    background-color: var(--color-dark-periwinkle);
     color: #ffffff;
     opacity: 1;
 }
@@ -244,14 +266,16 @@
     display: flex;
     gap: 0.5rem;
     justify-content: center;
+    cursor: pointer;
     height: 600px;
     overflow: hidden;
 }
 
 .single-image-track .illustration-item {
     flex: 1 0 0;
+    cursor: pointer;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: var(--image-border-radius);
 }
 
 .single-image-track img {
@@ -283,8 +307,8 @@
 
 .lightbox img {
     max-width: 100%;
-    max-height: 95vh;
-    border-radius: 5px;
+    max-height: 100vh;
+    border-radius: var(--image-border-radius);
 }
 
 .lightbox-close {
@@ -295,6 +319,7 @@
     border: none;
     color: white;
     font-size: 2.5rem;
+    cursor: pointer;
 }
 
 .lightbox-arrow {
@@ -305,13 +330,13 @@
     border: none;
     color: white;
     font-size: 3rem;
+    cursor: pointer;
 }
 
 .lightbox-arrow.left { left: 30px; }
 .lightbox-arrow.right { right: 30px; }
 
-
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
     /* Intro */
     .intro-container {
@@ -338,7 +363,7 @@
 
     /* Carousel */
     .carousel-section {
-        margin: 3rem auto;
+        margin: 3rem auto 5rem auto;
         padding: 0 1rem;
     }
 
@@ -364,7 +389,14 @@
         height: 32px;
     }
     .single-image-track {
-        height: 200px;
+        height: 600px;
         gap: 0.5rem;
+    }
+    .single-image-track .illustration-item {
+        flex: 0 0 100%;
+    }
+    .button {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

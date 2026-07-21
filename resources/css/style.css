@@ -1,10 +1,18 @@
+:root {
+    --image-border-radius: 3px;
+    --color-black-blue: #0B0D2B;
+    --color-periwinkle: #8ea4dc;
+    --color-dark-periwinkle: #4a6fa5;
+    --color-light-blue: #b3d8ff;
+    --color-dark-blue: #044387;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ensure the entire page takes at least the full height of the screen */
 html, body {
     height: 100%;
     margin: 0;
@@ -38,9 +46,11 @@ main {
   
 
 h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color:white;
-    margin: 0px auto;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    color: white;
+    padding: 50px;
+    background-image: url("../img/nightSky.png");
+    background-position-y: 45%;
     text-align: center;
     font-weight: normal;
 }
@@ -52,7 +62,7 @@ h2{
 
 h3{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #b3d8ff;
+    color: var(--color-light-blue);
     font-weight: bold;
     padding: 0px;
     padding-bottom: 5px;
@@ -60,10 +70,14 @@ h3{
 }
 
 /* BUTTONS */
+button, a {
+    cursor: pointer;
+}
+
 .button {
     display: block;
     text-decoration: none;
-    background-color: #b3d8ff;
+    background-color: var(--color-light-blue);
     color: black;
     padding: 15px 25px;
     border-radius: 5px;
@@ -74,12 +88,30 @@ h3{
 }
 
 .button:hover {
-    background-color: #8ea4dc;
+    background-color: var(--color-periwinkle);
 }
 
 .project-writeup .button {
     margin: auto;
     box-shadow: none;
+}
+
+.back-button {
+    width: 44px;
+    height: 44px;
+    color: var(--color-black-blue);
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 60;
+}
+
+.back-button:hover {
+    color: var(--color-dark-periwinkle);
 }
 
 @keyframes fadeInUp {

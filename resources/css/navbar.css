@@ -1,3 +1,5 @@
+
+
 /* NAV BAR */
 .nav-panel {
     position: fixed;
@@ -40,7 +42,7 @@
 }
 
 .nav-links a {
-    color: #0B0D2B;
+    color: var(--color-black-blue);
     text-decoration: none;
     font-size: 15px;
     letter-spacing: 1px;
@@ -48,7 +50,7 @@
 }
 
 .nav-links a:hover {
-    color: #4a6fa5;
+    color: var(--color-periwinkle);
 }
 
 .navbar-footer {
@@ -62,14 +64,14 @@
 }
 
 .navbar-footer a {
-    color: #4a6fa5;
+    color: var(--color-periwinkle);
     text-decoration: underline;
     font-size: 13px;
     font-weight: normal;
 }
 
 .navbar-footer a:hover {
-    color: #0B0D2B;
+    color: var(--color-dark-periwinkle);
 }
 
 .navbar-footer-icons {
@@ -89,7 +91,7 @@
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #0B0D2B;
+    background-color: var(--color-black-blue);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -176,6 +178,7 @@
         height: 18px;
         background: none;
         border: none;
+        cursor: pointer;
         padding: 0;
         position: fixed;
         top: 23px;
