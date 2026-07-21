@@ -121,11 +121,6 @@
 }
 
 @media (max-width: 600px) {
-    body {
-        padding-left: 0px;
-        padding-top: 64px;
-    }
-
     .navbar-top {
         display: flex;
         justify-content: flex-end;

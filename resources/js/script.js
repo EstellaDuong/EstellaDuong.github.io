@@ -1,23 +1,4 @@
-// fetch('navbar.html')
-//           .then(response => response.text())
-//           .then(data => {
-//             document.getElementById('navbar-placeholder').innerHTML = data;
 
-//         //navbar hamburger
-//         const hamburger = document.getElementById('hamburger');
-//         const navLinks = document.getElementById('nav-links');
-
-//         hamburger?.addEventListener('click', () => {
-//             hamburger.classList.toggle('open');
-//             navLinks.classList.toggle('open');
-//         });
-// });
-
-// fetch('footer.html')
-//           .then(response => response.text())
-//           .then(data => {
-//             document.getElementById('footer-placeholder').innerHTML = data;
-// });
 fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
@@ -64,6 +45,60 @@ fetch('navbar.html')
 document.getElementById('scroll-down-btn')?.addEventListener('click', () => {
     document.querySelector('.intro-container').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+//lightbox and illustrations list
+const illustrations = [
+    'resources/illustrations/hakyona.jpg',
+    'resources/illustrations/stern.jpeg',
+    'resources/illustrations/Jinmao.jpg',
+    'resources/illustrations/Frimmel.jpg',
+    'resources/illustrations/falin.jpg',
+    'resources/illustrations/dandadan.jpg',
+];
+
+let currentIndex = 0;
+const track = document.getElementById('illustration-track');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+function getVisibleImages() {
+  return [0, 1, 2].map(offset =>
+      illustrations[(currentIndex + offset) % illustrations.length]
+  );
+}
+
+function navigate(direction) {
+  currentIndex = (currentIndex + direction + illustrations.length) % illustrations.length;
+  renderTrack();
+}
+
+function renderTrack() {
+  track.innerHTML = getVisibleImages()
+      .map((src, i) => `
+          <div class="illustration-item" data-index="${i}">
+              <img src="${src}" alt="Illustration">
+          </div>
+      `).join('');
+
+  // clicking any of the 3 visible images opens the lightbox at that specific image
+  track.querySelectorAll('.illustration-item').forEach(item => {
+      item.addEventListener('click', () => {
+          const clickedOffset = parseInt(item.dataset.index);
+          currentIndex = (currentIndex + clickedOffset) % illustrations.length;
+          lightboxImg.src = illustrations[currentIndex];
+          lightbox.classList.add('open');
+      });
+  });
+}
+
+// replace your old track.addEventListener('click', ...) block with renderTrack() calls:
+document.getElementById('illustration-prev').addEventListener('click', () => navigate(-1));
+document.getElementById('illustration-next').addEventListener('click', () => navigate(1));
+document.getElementById('lightbox-prev').addEventListener('click', () => navigate(-1));
+document.getElementById('lightbox-next').addEventListener('click', () => navigate(1));
+
+renderTrack(); // initial render on page load
 
 
 //projects list

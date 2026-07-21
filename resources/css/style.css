@@ -38,6 +38,7 @@ main {
   
 
 h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color:white;
     margin: 0px auto;
     text-align: center;
@@ -45,11 +46,12 @@ h1{
 }
 
 h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #59728e;
-    padding-bottom: 5px;
 }
 
 h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #b3d8ff;
     font-weight: bold;
     padding: 0px;
@@ -91,3 +93,9 @@ h3{
     }
   }
 
+  @media (max-width: 600px) {
+    body {
+        padding-left: 0px;
+        padding-top: 64px;
+    }
+  }
