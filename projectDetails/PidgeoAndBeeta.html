@@ -31,38 +31,74 @@
 
             <img id="project-photo" src="" alt="" class="project-details-photo">
 
-            <div class="writeup-photo-pair">
-                    <img src="/resources/projects/PidgeoBeeta/PidgeoTurn.gif" alt="Beeta running right" style="--photo-weight: 33.6%">
-                    <img src="/resources/projects/PidgeoBeeta/PidgeoFly.gif" alt="Pidgeo running right" style="--photo-weight: 33.6%">
-                    <img src="/resources/projects/PidgeoBeeta/PidgeoWalk.gif" alt="Pidgeo running right" style="--photo-weight: 33.6%">
-            </div>
-
-            <div class="writeup-photo-pair">
-                    <img src="/resources/projects/PidgeoBeeta/BeetaTurn.gif" alt="Beeta turning right" style="--photo-weight: 40%">
-                    <img src="" alt="" style="--photo-weight: 35%">
-                    <img src="/resources/projects/PidgeoBeeta/BeetaWalk.gif" alt="Beeta running right" style="--photo-weight: 40%">
-            </div>
-
-
-            <h2>Video Demos</h2>
-            <video id="project-video" class="project-details-video" controls>
-                <source id="project-video-source" src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video id="project-video" class="project-details-video" controls>
-                <source id="project-video-source" src="/resources/projects/PidgeoBeeta/bossLevel.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
         </div>
 
 
         <div class="project-writeup">
 
             <div class="writeup-section">
+                <h2>Character Art/Animations</h2>
+                <div class="writeup-photo-pair">
+                        <img src="/resources/projects/PidgeoBeeta/PidgeoTurn.gif" alt="Pidgeo turning right" style="--photo-weight: 33.6%">
+                        <img src="/resources/projects/PidgeoBeeta/PidgeoFly.gif" alt="Pidgeo flying" style="--photo-weight: 33.6%">
+                        <img src="/resources/projects/PidgeoBeeta/PidgeoWalk.gif" alt="Pidgeo running right" style="--photo-weight: 33.6%">
+                </div>
+                <div class="writeup-photo-pair">
+                        <img src="/resources/projects/PidgeoBeeta/BeetaTurn.gif" alt="Beeta turning right" style="--photo-weight: 36%">
+                        <!-- <img src="" alt="" style="--photo-weight: 35%"> -->
+                        <img src="/resources/projects/PidgeoBeeta/BeetaWalk.gif" alt="Beeta running right" style="--photo-weight: 36%">
+                        <img src="/resources/projects/PidgeoBeeta/Shadow_Fly.gif" alt="Shadow flying" style="--photo-weight: 30%">
+                </div>
+                <!-- <img class="project-details-photo writeup-photo" src="/resources/projects/PidgeoBeeta/Shadow_Fly.gif" alt="Shadow flying" style="--photo-weight: 33.6%"> -->
+            </div>
+
+            <div class="writeup-section">
+                <h2>Video Demos</h2>
+                <video id="project-video" class="project-details-video" controls>
+                    <source id="project-video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video id="project-video" class="project-details-video" controls>
+                    <source id="project-video-source" src="/resources/projects/PidgeoBeeta/bossLevel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+
+            <div class="writeup-section">
                 <h2>Summary</h2>
-                <p></p>
+                <p>This was my senior capstone project. I co-developed a 2D cooperative puzzle-platformer in Godot, featuring asymmetric co-op gameplay where a pigeon and beetle use complementary abilities to solve environmental puzzles. Outside of level design and development, I primarily illustrated all original 2d assets for the game. This includes character designs and animations, background art, props, tilesets, and cutscenes. I also designed tile-based level layouts and interconnected puzzles that support a narrative-driven story of betrayal and revenge. This was developed with a 4-person team plus collaborating with an outside composer for original music.</p>
+                <img class="project-details-photo writeup-photo" src="/resources/projects/PidgeoBeeta/pidgeobeetaThumbnail.png" alt="Pidgeo & Beeta Title Screen">
             </div>
         
+            <div class="writeup-section">
+                <h2>Tilesets</h2>
+                <img class="project-details-photo writeup-photo" src="/resources/projects/PidgeoBeeta/tilesetDemo.gif" alt="Drawing tiles in Godot">
+                <p>As the sole artist for this project, I created all tilesets used in the game, ensuring a consistent visual style throughout the levels. One of the most challenging aspects of this was finding that drawing traditional tilesets with 47 or more combinations required a lot of time. Then, I discovered a method called the "dual-grid system," and quickly looked into how we could implement it into our game. In short, the dual-grid system uses one "world grid" and one "offset" grid. The second grid is offset by half a tile, and an algorithm is used to determine what each of its four corners will look like, reducing the number of tile combinations to just 16. With this method, I was able to optimize my time and create multiple tilesets to fill out the environment. </p>
+                <div class="writeup-photo-pair">
+                    <img src="/resources/projects/PidgeoBeeta/Grass_64px.png" alt="Grass tileset" style="--photo-weight: 25%">
+                    <img src="/resources/projects/PidgeoBeeta/Rocks_64px.png" alt="Rocks tileset" style="--photo-weight: 25%">
+                    <img src="/resources/projects/PidgeoBeeta/wood_64px.png" alt="Wood tileset" style="--photo-weight: 25%">
+                    <img src="/resources/projects/PidgeoBeeta/plank_64px.png" alt="Wooden planks tileset" style="--photo-weight: 25%">
+                </div>
+            </div>
+
+            <div class="writeup-section">
+                <h2>Art and Assets Examples</h2>
+
+                <img class="project-details-photo writeup-photo"src="/resources/projects/PidgeoBeeta/artAssets/lvl1.png" alt="Level 1: Bright forest and grass background." style="--photo-weight: 100%">
+
+                <img class="project-details-photo writeup-photo" src="/resources/projects/PidgeoBeeta/artAssets/lvl2.png" alt="Level 2: Dark forest background." style="--photo-weight: 100%">
+
+                <div class="writeup-photo-pair" style="gap:2rem;">
+                        <img src="/resources/projects/PidgeoBeeta/artAssets/Checkpoint.gif" alt="checkpoint" style="--photo-weight: 11%">
+                        <img src="/resources/projects/PidgeoBeeta/artAssets/Vine_Door.gif" alt="Vines coming down" style="--photo-weight: 10%">
+                        <img src="/resources/projects/PidgeoBeeta/artAssets/Switch_.gif" alt="lever switch" style="--photo-weight: 12%">
+                        <img src="/resources/projects/PidgeoBeeta/artAssets/Pushable_rock.png" alt="rock" style="--photo-weight: 10%">
+                        <img src="/resources/projects/PidgeoBeeta/artAssets/Button.gif" alt="button push" style="--photo-weight: 12%">
+                        <img src="/resources/projects/PidgeoBeeta/artAssets/shadowBlade.png" alt="Feather blade" style="--photo-weight: 18%">
+                </div>
+            </div>
         
 
             <a href="/projects.html" class="button">

@@ -170,6 +170,23 @@
         display: block;
     }
 
+    .navbar-top .logo a {
+    display: flex;
+    flex-direction: row-reverse; /* text comes first in HTML, so this visually flips it to the left */
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+    .navbar-top .logo p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: var(--color-periwinkle);
+        font-weight: bold;
+        font-size: 0.85rem;
+        margin: 0;
+        white-space: nowrap;
+    }
+
     .navbar-top,
     .hamburger {
         transition: transform 0.3s ease, opacity 0.2s ease;
