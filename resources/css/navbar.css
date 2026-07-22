@@ -94,7 +94,7 @@
 }
 
 .navbar-footer-icons a {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .hamburger {
@@ -172,7 +172,7 @@
 
     .navbar-top .logo a {
     display: flex;
-    flex-direction: row-reverse; /* text comes first in HTML, so this visually flips it to the left */
+    flex-direction: row-reverse; 
     align-items: center;
     gap: 10px;
     text-decoration: none;
@@ -225,6 +225,8 @@
         transition: transform 0.3s ease;
         box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
         z-index: 40;
+        display: flex;
+        flex-direction: column;
     }
 
     .nav-panel.open {
@@ -232,20 +234,29 @@
     }
 
     .panel-logo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
+        flex-shrink: 0;
     }
 
     .nav-links {
-        align-items: flex-start;
-        gap: 25px;
+        align-items: flex-start; /* remove to align center ! */
+        overflow-y: auto; 
+        flex-shrink: 1;
+        min-height: 0;
     }
 
     .navbar-footer {
         gap: 25px;
+        flex-shrink: 0;
     }
+
+    .navbar-footer a {
+        font-size: 15px;
+    }
+
+    .navbar-footer-icons a{
+        font-size: 22px;
+    }
+
     .panel-logo p, .panel-logo a {
     margin: auto 10px;
 }
