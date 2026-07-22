@@ -5,7 +5,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100vh; /* fallback for older browsers */
+    height: 100dvh; /* dynamically adjusts as Chrome's search bar shows/hides */
     width: 220px;
     background-color: #ffffff;
     display: flex;
@@ -239,9 +240,8 @@
 
     .nav-links {
         align-items: flex-start; /* remove to align center ! */
-        overflow-y: auto; 
-        flex-shrink: 1;
-        min-height: 0;
+        width: 100%;
+        gap: 25px;
     }
 
     .navbar-footer {
