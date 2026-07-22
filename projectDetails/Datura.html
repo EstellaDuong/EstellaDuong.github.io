@@ -22,17 +22,26 @@
     <div class="project-content-container">
 
         <div class="project-details-container">
-        <h1 id="project-title"></h1>
+            
+            <h1 id="project-title"></h1>
+
             <p id="project-description"></p>
+
             <div id="project-links"></div>
-            <img id="project-photo" src="" alt="" class="project-details-photo">
+
+            <!-- <div class="writeup-photo-pair">
+                    <img id="project-photo" src="" alt="" class="project-details-photo" style="--photo-weight: 50%">
+                    <img src="/resources/projects/Datura/daturaOutfits.png" alt="Datura Character Outfits" style="--photo-weight: 50%">
+            </div> -->
+            <img id="project-photo" src="" alt="" class="project-details-photo" style="--photo-weight: 50%">
+            <img src="/resources/projects/Datura/daturaOutfits.png" class="project-details-photo writeup-photo" alt="Datura Character Outfits" style="--photo-weight: 50%">
+
             <h2>Video Demo</h2>
             <video id="project-video" class="project-details-video" controls>
                 <source id="project-video-source" src="" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-
 
 
         <div class="project-writeup">
@@ -60,9 +69,10 @@
                 <p>We designed and implemented relational database schemas to support core features, including users, study sessions, categories, friendships, leaderboards, notes, and avatar items. This involved defining foreign key relationships and structuring queries to efficiently retrieve user-specific data.</p>
                 
                 <div class="writeup-photo-pair">
-                    <img src="/resources/projects/Datura/timer.png" alt="app timer">
-                    <img src="/resources/projects/Datura/dashboard.png" alt="app dashboard">
+                    <img src="/resources/projects/Datura/timer.png" alt="app timer" style="--photo-weight: 40%">
+                    <img src="/resources/projects/Datura/dashboard.png" alt="app dashboard" style="--photo-weight: 60%">
                 </div>
+
                 <p>One of the core features was the study timer. We implemented a timer system that records session data upon completion or early termination, including duration, selected category, and rewards (coins). This data is persisted to the database and dynamically rendered into a calendar view and a bar chart so users can track their study habits over time.</p>
                 
                 <img src="/resources/projects/Datura/store.png" alt="app store" class="project-details-photo writeup-photo">

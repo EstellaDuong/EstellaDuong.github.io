@@ -15,7 +15,7 @@
 .project-details-container h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    margin-bottom: 1.5rem;
+    margin: 2.5rem auto;
     color: black;
     background-image: none;
     padding: 0;
@@ -53,6 +53,7 @@
     max-height: 500px;
     border-radius: var(--image-border-radius);
     margin: 0 auto 2rem auto;
+    max-width: 100%;
 }
 
 .project-details-video {
@@ -96,9 +97,9 @@
 }
 
 .writeup-photo-pair img {
-    width: calc(50% - 0.5rem);
+    width: calc(var(--photo-weight, 50%) - 0.5rem);
     border-radius: var(--image-border-radius);
-    object-fit: cover;
+    object-fit: contain;
 }
 
 @media (max-width: 600px) {

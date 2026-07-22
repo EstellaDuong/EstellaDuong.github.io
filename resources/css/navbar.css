@@ -18,10 +18,24 @@
 
 .panel-logo {
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-logo p, .panel-logo a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--color-periwinkle);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto 20px;
+    text-decoration: none;
 }
 
 .logo img {
-    height: 70px;
+    height: 75px;
 }
 
 .navbar-top {
@@ -215,4 +229,7 @@
     .navbar-footer {
         gap: 25px;
     }
+    .panel-logo p, .panel-logo a {
+    margin: auto 10px;
+}
 }
