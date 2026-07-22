@@ -1,17 +1,21 @@
 //lightbox and illustrations list
 const illustrations = [
-    'resources/illustrations/hakyona.jpg',
     'resources/illustrations/stern.jpeg',
     'resources/illustrations/Jinmao.jpg',
-    'resources/illustrations/Frimmel.jpg',
-    'resources/illustrations/falin.jpg',
     'resources/illustrations/dandadan.jpg',
+    'resources/illustrations/hakyona.jpg',
+    'resources/illustrations/falin.jpg',
+    'resources/illustrations/Frimmel.jpg',
     'resources/illustrations/blossom.jpg',
     'resources/illustrations/esper.png',
     'resources/illustrations/weakhero.jpg',
     'resources/illustrations/yuji_.jpg',
-    'resources/illustrations/strawby.jpeg',
     'resources/illustrations/frieren.jpeg',
+    'resources/illustrations/goth.jpeg',
+    'resources/illustrations/yellowDragon.jpg',
+    'resources/illustrations/tadakomi.jpg',
+    'resources/illustrations/theboy.jpg',
+    'resources/illustrations/strawby.jpeg',
 ];
 
 illustrations.forEach(src => {

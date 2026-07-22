@@ -92,7 +92,7 @@
 
 .writeup-photo-pair {
     display: flex;
-    gap: 1rem;
+    gap: var(--pair-gap, 1rem);
     margin: 1.5rem 0;
     justify-content: center;
 }
@@ -105,10 +105,17 @@
 
 @media (max-width: 600px) {
     .writeup-photo-pair {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .writeup-photo-pair img {
+     .writeup-photo-pair img {
+        width: calc(50% - (var(--pair-gap, 1rem) / 2));
+        min-width: 0;
+    }
+
+    .writeup-photo-pair.full-width-mobile img {
         width: 100%;
     }
+    
 }
