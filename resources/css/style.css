@@ -1,6 +1,7 @@
 :root {
     --image-border-radius: 3px;
     --color-black-blue: #0B0D2B;
+    --color-black-blue-light: #0b0d2b66;
     --color-periwinkle: #8ea4dc;
     --color-dark-periwinkle: #4a6fa5;
     --color-light-blue: #b3d8ff;
@@ -131,6 +132,55 @@ button, a {
     color: var(--color-dark-periwinkle);
 }
 
+
+
+.view-all-button, .view-all-button a {
+    display: block;
+    width: fit-content;
+    margin: 1.3rem auto 0 auto;
+    text-decoration: none;
+    padding: 0.6rem 1.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: var(--color-black-blue);
+    background-color: white;
+    border: 1px solid var(--color-black-blue-light);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.view-all-button:hover {
+    border: 1.3px solid var(--color-black-blue);
+    color: var(--color-black-blue);
+    opacity: 1;
+}
+
+
+
+button,
+.button,
+.view-all-button,
+.carousel-arrow,
+.back-button {
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, text-shadow 0.2s ease, border 0.2s ease, color 0.2s ease;
+}
+
+button:hover,
+.button:hover,
+.view-all-button:hover,
+.carousel-arrow:hover{
+    transform: translateY(-1px);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.back-button:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+
+
+
 @keyframes fadeInUp {
     0% {
       /* transform: translateY(100%); */
@@ -214,6 +264,7 @@ button, a {
     color: white;
     font-size: 3rem;
     cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
 .lightbox-arrow.left { 
@@ -226,6 +277,10 @@ button, a {
     right: 30px; 
     z-index: 102;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-arrow:hover {
+    transform: translateY(calc(-50% - 3px));
 }
 
 #lightbox-img {

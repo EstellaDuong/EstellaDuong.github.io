@@ -54,7 +54,7 @@ document.getElementById('scroll-down-btn')?.addEventListener('click', () => {
 
 
 
-//projects list
+//projects list on projects page
 fetch('/resources/projects/projects.json')
   .then(response => response.json())
   .then(projects => {
@@ -70,6 +70,7 @@ fetch('/resources/projects/projects.json')
           <div class="project-info">
             <h2>${project.title}</h2>
             <p>${project.description}</p>
+            <span class="view-all-button project-view-button">View Project &rarr;</span>
           </div>
         </a>
       `;
@@ -79,7 +80,7 @@ fetch('/resources/projects/projects.json')
 
 
 
-//project details
+//project details page creation
 function loadProjectDetails() {
     const page = document.getElementById('project-title');
     if (!page) return;

@@ -6,9 +6,9 @@
 
 .project-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: coloumn;
     gap: 1.5rem;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 1.5rem;
     background: #ffffff;
     border-radius: var(--image-border-radius);
@@ -38,7 +38,23 @@
 .project-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.project-view-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0; /* overrides .view-all-button's auto-centering margin */
+    color: var(--color-black-blue-light);
+    border: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+.project-view-button:hover {
+    border: none;
+    box-shadow: none;
 }
 
 .project-info h2 {
@@ -52,6 +68,8 @@
     line-height: 1.6;
     color: #555;
 }
+
+
 
 
 

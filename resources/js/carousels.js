@@ -142,8 +142,11 @@ renderTrack(); // initial render on page load (no-ops if #illustration-track doe
 let carouselIndex = 0;
 let carouselProjects = [];
 
+// DETERMINES THE NUMBER OF PROJECTS VISIBLE AT A TIME
 function getVisible() {
-    return window.innerWidth <= 600 ? 1 : 3;
+    // return window.innerWidth <= 600 ? 1 : 3;
+    return window.innerWidth <= 600 ? 1 : 2;
+    // return 1; //shows 1 project at a time
 }
 
 fetch('/resources/projects/projects.json')
@@ -168,6 +171,7 @@ function renderCarousel() {
                     <img src="${project.thumbnail}" alt="${project.title}">
                 </div>
                 <div class="carousel-card-title">${project.title}</div>
+                <p class="carousel-card-description">${project.description}</p>
             </a>
         `;
     }

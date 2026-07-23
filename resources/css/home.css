@@ -84,10 +84,12 @@
     align-items: center;
     justify-content: center;
     animation: bounce 2s infinite;
-    transition: background-color 0.2s ease;
+     transition: transform 0.2s ease, background-color 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
 }
 
-.scroll-down-btn:hover {
+.scroll-down-btn:hover{
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+    box-shadow: none;
     color: var(--color-light-blue);
 }
 
@@ -166,10 +168,11 @@
     gap: 1.5rem;
     flex: 1;
     overflow: hidden;
+    padding-top: 4px; /* room for hover  */
 }
 
 .carousel-card {
-    flex: 1 0 0;
+    flex: 1 1 0;
     background: #ffffff;
     border: 1px solid #e8e8e8;
     border-radius: var(--image-border-radius);
@@ -179,14 +182,10 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.carousel-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-}
-
 .carousel-card-thumbnail-wrapper {
     width: 100%;
-    height: 260px;
+    /* height: 260px; for 3 projects*/
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,22 +194,32 @@
 }
 
 .carousel-card-thumbnail-wrapper img {
-    width: 100%;
+    /* width: 100%; */
+    width: auto;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .carousel-card:hover .carousel-card-thumbnail-wrapper img {
-    transform: scale(1.04);
+    transform: scale(1.03);
+}
+.single-image-track .illustration-item:hover, .carousel-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.08);
 }
 
 .carousel-card-title {
     padding: 0.9rem 1rem;
-    font-size: 0.95rem;
+    font-size: 0.97rem;
     font-weight: 600;
     text-align: center;
     color: #1a1a1a;
+}
+.carousel-card p {
+    color: rgb(126, 126, 126);
+    margin: 0px 20px 20px 20px;
+    font-size: 0.85rem;
 }
 
 .carousel-arrow {
@@ -221,18 +230,19 @@
     height: 40px;
     border-radius: 50%;
     font-size: 1.5rem;
+    line-height: 1;
+    padding: 0 0 4px 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     color: var(--color-black-blue);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .carousel-arrow:hover {
-    background-color: #f5f5f5;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* background-color: #f5f5f5; */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     opacity: 1;
 }
 
@@ -243,26 +253,6 @@
 }
 
 
-.view-all-button, .view-all-button a {
-    display: block;
-    width: fit-content;
-    margin: 1rem auto 0 auto;
-    text-decoration: none;
-    padding: 0.6rem 1.75rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    color: white;
-    background-color: var(--color-black-blue);
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.view-all-button:hover {
-    background-color: var(--color-dark-periwinkle);
-    color: #ffffff;
-    opacity: 1;
-}
 
 
 
@@ -274,7 +264,7 @@
     justify-content: center;
     cursor: pointer;
     height: 600px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .single-image-track .illustration-item {
@@ -282,6 +272,7 @@
     cursor: pointer;
     overflow: hidden;
     border-radius: var(--image-border-radius);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
 .single-image-track img {
@@ -293,7 +284,7 @@
 }
 
 .illustration-item:hover img {
-    transform: scale(1.06);
+    transform: scale(1.02);
 }
 
 
@@ -372,7 +363,7 @@
     transition: opacity 0.05s ease;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     /* Intro */
     .intro-container {
@@ -416,11 +407,16 @@
     }
 
     .carousel-card-thumbnail-wrapper {
-        height: 260px;
+        /* height: 260px; for 3 projects */
+        height: 400px;
     }
 
     .carousel-card-title {
+        font-size: 0.9rem;
+    }
+    .carousel-card p {
         font-size: 0.85rem;
+        color: var(--color-black-blue);
     }
 
     .carousel-arrow {
@@ -431,6 +427,7 @@
     .single-image-track {
         height: 600px;
         gap: 0.5rem;
+        overflow: hidden;
     }
     .single-image-track .illustration-item {
         flex: 0 0 100%;
@@ -449,11 +446,5 @@
         font-size: 0.7rem;
         margin-left: 8px;
         margin-right: 8px;
-    }
-    .lightbox-arrow.left { 
-    left: 10px; 
-    }
-    .lightbox-arrow.right { 
-        right: 10px; 
     }
 }
