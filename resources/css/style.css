@@ -292,6 +292,11 @@ button:hover,
     cursor: pointer;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
     z-index: 103;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+.lightbox-close:hover {
+    box-shadow: none;
+    transform: translateY(-3px);
 }
 
 .lightbox-arrow {
