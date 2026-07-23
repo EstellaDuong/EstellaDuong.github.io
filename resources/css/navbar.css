@@ -105,6 +105,9 @@
 .hamburger {
     display: none;
 }
+.hamburger:hover {
+    box-shadow: none;
+}
 
 .hamburger span {
     display: block;
