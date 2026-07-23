@@ -16,6 +16,7 @@ const illustrations = [
     'resources/illustrations/tadakomi.jpg',
     'resources/illustrations/theboy.jpg',
     'resources/illustrations/strawby.jpeg',
+    'resources/illustrations/moonlight.jpg'
 ];
 
 illustrations.forEach(src => {

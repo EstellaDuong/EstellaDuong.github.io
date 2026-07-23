@@ -36,9 +36,15 @@
     },
     {
       "title": "Sleep Vitamin Packaging | Product Design",
-      "description": "My take on a fun packaging design for a sleep vitamin product, focused on appealing visuals, colors, and readable typography made in Adobe Illustrator.",
+      "description": "My take on a fun packaging design for a sleep vitamin product, focused on appealing visuals, colors, and readable typography.",
       "thumbnail": "/resources/projects/SleepVitamins/packageMockup.png",
       "photo": "/resources/projects/SleepVitamins/packageMockup.png",
       "link": "/projectDetails/SleepVitamins.html?project=3"
+    },
+    {
+      "title": "Colorado Symphony Poster Mailer | Design",
+      "description": "An informational poster mailer for the Colorado Symphony's 2025 concert schedule.",
+      "thumbnail": "/resources/projects/ColoradoSymphony/posterMailerFront.png",
+      "link": "/projectDetails/ColoradoSymphony.html?project=4"
     }
   ]
