@@ -169,6 +169,7 @@
     flex: 1;
     overflow: hidden;
     padding-top: 4px; /* room for hover  */
+    padding-bottom: 10px; /* room for hover  */
 }
 
 .carousel-card {
@@ -202,11 +203,11 @@
 }
 
 .carousel-card:hover .carousel-card-thumbnail-wrapper img {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 .single-image-track .illustration-item:hover, .carousel-card:hover{
     transform: translateY(-4px);
-    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
 }
 
 .carousel-card-title {
