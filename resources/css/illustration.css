@@ -4,7 +4,7 @@
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 0.6rem;
     max-width: 1200px;
-    margin: 3rem auto;
+    margin: 3rem auto 1rem auto;
     padding: 0 1.5rem;
 }
 
@@ -25,6 +25,16 @@
 
 .gallery-item:hover img {
     transform: scale(1.02);
+}
+
+.scroll-down-btn {
+    color:var(--color-black-blue); 
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+.scroll-down-btn:hover {
+    color:var(--color-dark-periwinkle); 
+    text-shadow: none;
 }
 
 @media (max-width: 600px) {

@@ -91,6 +91,7 @@
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
     box-shadow: none;
     color: var(--color-light-blue);
+    transform: none;
 }
 
 @keyframes bounce {
