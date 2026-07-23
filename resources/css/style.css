@@ -156,6 +156,45 @@ button, a {
     opacity: 1;
 }
 
+.scroll-down-btn {
+    margin-top: 50px;
+    background: none;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s infinite;
+     transition: transform 0.2s ease, background-color 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.scroll-down-btn:hover{
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+    box-shadow: none;
+    color: var(--color-light-blue);
+    transform: none;
+}
+
+#scroll-top-btn {
+    color:var(--color-black-blue); 
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+#scroll-top-btn:hover {
+    color:var(--color-dark-periwinkle); 
+    text-shadow: none;
+}
+
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
 
 
 button,

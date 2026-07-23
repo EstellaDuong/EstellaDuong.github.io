@@ -27,16 +27,6 @@
     transform: scale(1.02);
 }
 
-.scroll-down-btn {
-    color:var(--color-black-blue); 
-    display: block;
-    margin: 0 auto 1rem auto;
-}
-.scroll-down-btn:hover {
-    color:var(--color-dark-periwinkle); 
-    text-shadow: none;
-}
-
 @media (max-width: 600px) {
     .illustration-gallery {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
