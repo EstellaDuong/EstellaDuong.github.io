@@ -12,26 +12,26 @@
     ]
     },
     {
+      "title": "Camp Cupid | Dating Sim with Controller",
+      "description": "A dating simulation game with a physical, bow-and-arrow controller. Alt arcade style! ",
+      "thumbnail": "/resources/projects/CampCupid/dannyThumbnail.png",
+      "photo": "/resources/projects/CampCupid/dannyThumbnail.png",
+      "link": "/projectDetails/CampCupid.html?project=1",
+      "externalLinks": [
+        { "label": "Game GitHub", "url": "https://github.com/compactcola/camp_cupid" },
+        { "label": "Bow GitHub", "url": "https://github.com/FacioErgoSum/Alt-Arcade-2025" }
+    ]
+    },
+    {
       "title": "Datura | Study App",
       "description": "A study tracker that turns productivity into something you look forward to. Datura blends study session tracking, friendly competition, and avatar customization into one cohesive, full-stack app. Turn study habits into a fun, visual, and interactive experience that’s easy to stick with!",
       "thumbnail": "/resources/projects/Datura/daturaPhoneMockup.png",
       "photo": "/resources/projects/Datura/daturaPhoneMockup.png",
       "video": "/resources/projects/Datura/daturaVideo.mp4",
-      "link": "/projectDetails/Datura.html?project=1",
+      "link": "/projectDetails/Datura.html?project=2",
       "externalLinks": [
         { "label": "GitHub", "url": "https://github.com/jtghchau/Datura" },
         { "label": "Visit Datura's Live Site", "url": "https://datura.onrender.com/" }
-    ]
-    },
-    {
-      "title": "Camp Cupid | Dating Sim with Controller",
-      "description": "A dating simulation game with a physical, bow-and-arrow controller. Alt arcade style! ",
-      "thumbnail": "/resources/projects/CampCupid/dannyThumbnail.png",
-      "photo": "/resources/projects/CampCupid/dannyThumbnail.png",
-      "link": "/projectDetails/CampCupid.html?project=2",
-      "externalLinks": [
-        { "label": "Game GitHub", "url": "https://github.com/compactcola/camp_cupid" },
-        { "label": "Bow GitHub", "url": "https://github.com/FacioErgoSum/Alt-Arcade-2025" }
     ]
     },
     {
