@@ -27,12 +27,18 @@
       "title": "Camp Cupid | Dating Sim with Controller",
       "description": "A dating simulation game with a physical, bow-and-arrow controller. Alt arcade style! ",
       "thumbnail": "/resources/projects/CampCupid/dannyThumbnail.png",
-      "link": "#"
+      "photo": "/resources/projects/CampCupid/dannyThumbnail.png",
+      "link": "/projectDetails/CampCupid.html?project=2",
+      "externalLinks": [
+        { "label": "Game GitHub", "url": "https://github.com/compactcola/camp_cupid" },
+        { "label": "Bow GitHub", "url": "https://github.com/FacioErgoSum/Alt-Arcade-2025" }
+    ]
     },
     {
       "title": "Sleep Vitamin Packaging | Product Design",
       "description": "My take on a fun packaging design for a sleep vitamin product.",
       "thumbnail": "/resources/projects/SleepVitamins/packageMockup.png",
-      "link": "#"
+      "photo": "/resources/projects/SleepVitamins/packageMockup.png",
+      "link": "/projectDetails/SleepVitamins.html?project=3"
     }
   ]

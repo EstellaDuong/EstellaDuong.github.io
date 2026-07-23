@@ -266,7 +266,7 @@
 
 
 
-/* LIGHTBOX + CAROUSEL FOR ILLUSTRATIONS */
+/*CAROUSEL FOR ILLUSTRATIONS */
 .single-image-track {
     flex: 1;
     display: flex;
@@ -342,6 +342,7 @@
     color: white;
     font-size: 2.5rem;
     cursor: pointer;
+    z-index: 103;
 }
 
 .lightbox-arrow {

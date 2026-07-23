@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DATURA | Estella's Portfolio</title>
+    <title>Pidgeo & Beeta | Estella's Portfolio</title>
     <link rel="icon" type="png" href="../resources/img/logo.png">
     <script src="https://kit.fontawesome.com/516ea5d673.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../resources/css/navbar.css">
@@ -45,11 +45,9 @@
                 </div>
                 <div class="writeup-photo-pair">
                         <img src="/resources/projects/PidgeoBeeta/BeetaTurn.gif" alt="Beeta turning right" style="--photo-weight: 36%">
-                        <!-- <img src="" alt="" style="--photo-weight: 35%"> -->
                         <img src="/resources/projects/PidgeoBeeta/BeetaWalk.gif" alt="Beeta running right" style="--photo-weight: 36%">
                         <img src="/resources/projects/PidgeoBeeta/Shadow_Fly.gif" alt="Shadow flying" style="--photo-weight: 30%">
                 </div>
-                <!-- <img class="project-details-photo writeup-photo" src="/resources/projects/PidgeoBeeta/Shadow_Fly.gif" alt="Shadow flying" style="--photo-weight: 33.6%"> -->
             </div>
 
             <div class="writeup-section">
@@ -70,7 +68,8 @@
                 <div class="writeup-photo-pair full-width-mobile">
                     <img class="project-details-photo writeup-photo" src="/resources/projects/PidgeoBeeta/pidgeobeetaThumbnail.png" alt="Pidgeo & Beeta Title Screen" style="--photo-weight: 50%; margin: 0;">
                 </div>
-                <p>This was my senior capstone project. I co-developed a 2D cooperative puzzle-platformer in Godot. This features asymmetric gameplay where a pigeon and beetle use complementary abilities to solve environmental puzzles. Outside of level design and development, I primarily illustrated all original 2d assets for the game. This includes character designs and animations, background art, props, tilesets, and cutscenes. I also designed tile-based level layouts and interconnected puzzles that support a narrative-driven story. This was developed with a 4-person team plus collaborating with an outside composer for original music.</p>
+                <p>Pidgeo & Beeta came about as my senior capstone project, where I worked in a 4-person team and collaborated with an outside music composer. I co-developed this 2D cooperative puzzle-platformer in Godot. Our game features asymmetric gameplay where two players take on the role of a pigeon (Pidgeo) and beetle (Beeta) duo. Players must use complementary abilities to solve environmental puzzles and progress through levels, developing the story along the way. Outside of level design and development, I primarily illustrated original 2d assets for the game. This includes character designs and animations, background art, props, tilesets, and cutscenes.</p>
+                <p>The game opens in Feather Hollow, a once peaceful village, when it is turned upside down after a brutal attack and mass kidnapping at the hands of Pidgeo's brother. An unlikely pair, Pidgeo and Beeta, must work together across treacherous landscapes. The two animals must solve puzzles and uncover clues to reveal the truth behind the tragedy and exact their revenge.</p>
             </div>
         
             <div class="writeup-section">
@@ -84,7 +83,7 @@
 
                 <img class="project-details-photo writeup-photo" src="/resources/projects/PidgeoBeeta/tilesetDemo.gif" alt="Drawing tiles in Godot">
 
-                <p>As the sole artist for this project, I created all tilesets used in the game, ensuring a consistent visual style throughout the levels. One of the most challenging aspects of this was finding that drawing traditional tilesets with 47 or more combinations required a lot of time. Then, I discovered a method called the "dual-grid system," and quickly looked into how we could implement it into our game. In short, the dual-grid system uses one "world grid" and one "offset" grid. The second grid is offset by half a tile, and an algorithm is used to determine what each of its four corners will look like, reducing the number of tile combinations to just 16. With this method, I was able to optimize my time and create multiple tilesets to fill out the environment. </p>
+                <p>As the sole artist for this project, I created all tilesets used in the game, ensuring a consistent visual style throughout the levels. One of the most challenging aspects of this was that drawing traditional tilesets with 47 or more combinations required a lot of time. When I discovered a method called the "dual-grid system," I quickly looked into how we could implement it into our game. In short, the dual-grid system uses one "world grid" and one "offset" grid. The second grid is offset by half a tile, and an algorithm is used to determine what each of its four corners will look like, reducing the number of tile combinations to just 16. With this method, I was able to optimize my time and create multiple tilesets to fill out the environment. </p>
             </div>
 
             <div class="writeup-section">
@@ -111,8 +110,17 @@
                 <img class="project-details-photo writeup-photo"src="/resources/projects/PidgeoBeeta/artAssets/lvl1.png" alt="Level 1: Bright forest and grass background." style="--photo-weight: 100%">
 
                 <img class="project-details-photo writeup-photo" src="/resources/projects/PidgeoBeeta/artAssets/lvl2.png" alt="Level 2: Dark forest background." style="--photo-weight: 100%">
+            </div>
 
-
+            <div class="writeup-section">
+                <h2>Credits</h2>
+                <ul>
+                    <li>Estella Duong</li>
+                    <li>Ryan Ong</li>
+                    <li>Alejandra Avelar</li>
+                    <li>Henry Nguyen</li>
+                    <li>Benjamin Hightower (music)</li>
+                </ul>
             </div>
         
 
@@ -125,7 +133,17 @@
     </div>
     </main>
 
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <div class="lightbox-image-wrapper">
+            <img src="" alt="" class="lightbox-img active" id="lightbox-img-a">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img-b">
+        </div>
+    </div>
+
     <script src="/resources/js/script.js"></script>
+    <script src="/resources/js/carousels.js"></script>
+    <script src="/resources/js/projects.js"></script>
     
 </body>
 </html>
