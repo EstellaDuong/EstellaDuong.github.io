@@ -42,9 +42,16 @@
       "link": "/projectDetails/SleepVitamins.html?project=3"
     },
     {
+      "title": "Oasis Dental Window Art Graphic | Design",
+      "description": "A cartoon surfing tooth design for Oasis Dental's front window graphic.",
+      "thumbnail": "/resources/projects/OasisDental/OasisDentalBuilding.jpg",
+      "photo": "/resources/projects/OasisDental/OasisDentalBuilding.jpg",
+      "link": "/projectDetails/OasisDental.html?project=4"
+    },
+    {
       "title": "Colorado Symphony Poster Mailer | Design",
       "description": "An informational poster mailer for the Colorado Symphony's 2025 concert schedule.",
       "thumbnail": "/resources/projects/ColoradoSymphony/posterMailerFront.png",
-      "link": "/projectDetails/ColoradoSymphony.html?project=4"
+      "link": "/projectDetails/ColoradoSymphony.html?project=5"
     }
   ]

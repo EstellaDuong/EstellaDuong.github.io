@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="../resources/img/logo.png">
+    <script src="https://kit.fontawesome.com/516ea5d673.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../resources/css/navbar.css">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="../resources/css/projectDetails.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <button class="back-button" onclick="history.back()" aria-label="Go back">
+    <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+ <main>
+    <div class="project-content-container">
+
+        <div class="project-details-container">
+            
+            <h1 id="project-title"></h1>
+
+            <p id="project-description"></p>
+
+            <div id="project-links"></div>
+
+            <img id="project-photo" src="" alt="" class="project-details-photo">
+
+        </div>
+
+
+        <div class="project-writeup">
+                <div class="writeup-photo-pair full-width-mobile">
+                    <img class="project-details-photo writeup-photo" src="/resources/projects/OasisDental/Surfing_Tooth_OasisDental 2.jpg" alt="cartoon smiling tooth surfing on a toothbrush" style="--photo-weight: 80%;">
+                </div>
+
+            <div class="writeup-section">
+                <h2>Summary</h2>
+                <p>I was hired by Oasis Dental to design a fun character to add to the front window of their dental office. The final graphic was created in Adobe Illustrator and features a happy tooth character who is surfing on a toothbrush. You can find this piece of art at Oasis Dental's Aurora, CO location.</p>
+            </div>
+
+            <div class="writeup-section">
+                <h2>The Process</h2>
+                <p>This design went through many iterations as I aimed to capture a fun, eye-catching image that would appeal to both child and adult Oasis Dental patients. At the same time, I also focused on incorporating aspects of their existing minimalistic branding so that the graphic did not look out of place.</p>
+
+                <img class="project-details-photo writeup-photo" src="/resources/projects/OasisDental/toothSketches.jpg" alt="Sketches of tooth surfing on toothbrush and surf board">
+
+                <p>After coming up with our idea, I created some initial sketches to discuss with the client. Here, we agreed to simplify the style and decided to iterate further on design 6.</p>
+
+                <div class="writeup-photo-pair writeup-photo-pair">
+                    <img src="/resources/projects/OasisDental/idea1.jpg" alt="Tooth surfing with wave outline behind">
+                    <img src="/resources/projects/OasisDental/idea2.jpg" alt="Simple tooth surfing on spiky water waves straight below">
+                </div>
+
+                <p>I created some more sketch examples to help visualize how far we wanted to go in terms of simplification. There was a fine balance we had to find between being too detailed and too minimalistic. It was also important to see examples of how the design looked next to the rest of the window text.</p>
+
+                <img class="project-details-photo writeup-photo" src="/resources/projects/OasisDental/toothDrafts.jpg" alt="4 examples of tooth surfing with different color schemes">
+
+                <p>In the final stretch of the design process, we agreed on the character's expression and pose, leaving the coloring for last. In an attempt to follow the simple, flowing lines seen in their other signs, I created several versions of coloring that highlighted that. Ultimately, we agreed that bolder fill colors and less focus on lines looked the best. With the design completed, it was ready to be sent off to be printed and displayed at Oasis Dental's office!</p>
+
+                
+            </div>
+        
+
+            <a href="/projects.html" class="button">
+                View All Projects</a>
+        
+        </div>
+
+
+    </div>
+    
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <div class="lightbox-image-wrapper">
+            <img src="" alt="" class="lightbox-img active" id="lightbox-img-a">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img-b">
+        </div>
+    </div>
+
+    <script src="/resources/js/script.js"></script>
+    <script src="/resources/js/carousels.js"></script>
+    <script src="/resources/js/projects.js"></script>
+    
+</body>
+</html>

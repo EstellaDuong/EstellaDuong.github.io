@@ -16,7 +16,14 @@ const illustrations = [
     'resources/illustrations/tadakomi.jpg',
     'resources/illustrations/theboy.jpg',
     'resources/illustrations/strawby.jpeg',
-    'resources/illustrations/moonlight.jpg'
+    'resources/illustrations/catburger.jpg',
+    'resources/illustrations/white.jpg',
+    'resources/illustrations/moonlight.jpg',
+    'resources/illustrations/rock.jpg',
+    'resources/illustrations/crimsonQueen.jpg',
+    'resources/illustrations/nottestellata.jpg',
+    'resources/illustrations/solo.jpg',
+    'resources/illustrations/Kghn.jpg'
 ];
 
 illustrations.forEach(src => {
