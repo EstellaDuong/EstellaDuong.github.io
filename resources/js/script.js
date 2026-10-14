@@ -55,14 +55,11 @@ document.getElementById('scroll-top-btn')?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-//back button on project pages: go back if we came from this site, otherwise go to the projects page
+//back button on project pages: return to the page we came from on this site, otherwise go to the projects page
 function goBack() {
-    const cameFromThisSite = document.referrer && new URL(document.referrer).origin === location.origin;
-    if (cameFromThisSite && history.length > 1) {
-        history.back();
-    } else {
-        location.href = '/projects';
-    }
+    const ref = document.referrer;
+    const cameFromThisSite = ref && new URL(ref).origin === location.origin && ref !== location.href;
+    location.href = cameFromThisSite ? ref : '/projects';
 }
 
 
