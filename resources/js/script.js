@@ -69,7 +69,7 @@ fetch('/resources/projects/projects.json')
       container.innerHTML += `
         <a href="${project.link}" class="project-card">
           <div class="project-thumbnail-wrapper">
-            <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail">
+            <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail" loading="lazy" decoding="async">
           </div>
           <div class="project-info">
             <h2>${project.title}</h2>

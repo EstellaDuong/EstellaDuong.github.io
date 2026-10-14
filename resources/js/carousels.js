@@ -26,11 +26,6 @@ const illustrations = [
     '/resources/illustrations/Kghn.jpg'
 ];
 
-illustrations.forEach(src => {
-    const img = new Image();
-    img.src = src;
-});
-
 let currentIndex = 0;
 const track = document.getElementById('illustration-track');
 const lightbox = document.getElementById('lightbox');
@@ -117,7 +112,7 @@ if (galleryEl) {
     galleryEl.innerHTML = illustrations
         .map((src, i) => `
             <div class="gallery-item" data-index="${i}">
-                <img src="${src}" alt="Illustration">
+                <img src="${src}" alt="Illustration" loading="lazy" decoding="async">
             </div>
         `).join('');
 

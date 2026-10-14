@@ -5,18 +5,31 @@
       "thumbnail": "/resources/projects/PidgeoBeeta/pidgeobeetaThumbnail.png",
       "photo": "/resources/projects/PidgeoBeeta/splashArt.png",
       "video": "/resources/projects/PidgeoBeeta/level1.mp4",
-      "link": "/projectDetails/PidgeoAndBeeta.html?project=0",
+      "link": "/projectDetails/PidgeoAndBeeta?project=0",
       "externalLinks": [
         { "label": "GitHub", "url": "https://github.com/rynong99/PidgeoAndBeeta" },
         { "label": "Play on itch.io", "url": "https://itskon.itch.io/pidgeo-and-beeta" }
     ]
     },
     {
+      "title": "Sleep Vitamin Packaging | Product Design",
+      "description": "My take on a fun packaging design for a sleep vitamin product, focused on appealing visuals, colors, and readable typography.",
+      "thumbnail": "/resources/projects/SleepVitamins/packageMockup.png",
+      "photo": "/resources/projects/SleepVitamins/packageMockup.png",
+      "link": "/projectDetails/SleepVitamins?project=1"
+    },
+    {
+      "title": "Colorado Symphony Poster Mailer | Design",
+      "description": "An informational poster mailer for Colorado Symphony's 2025 concert schedule.",
+      "thumbnail": "/resources/projects/ColoradoSymphony/posterMailerFront.png",
+      "link": "/projectDetails/ColoradoSymphony?project=2"
+    },
+    {
       "title": "Camp Cupid | Dating Sim with Controller",
       "description": "A dating simulation game featuring a physical bow-and-arrow controller. Aim and shoot in this love-themed arcade game! ",
       "thumbnail": "/resources/projects/CampCupid/dannyThumbnail.png",
       "photo": "/resources/projects/CampCupid/dannyThumbnail.png",
-      "link": "/projectDetails/CampCupid.html?project=1",
+      "link": "/projectDetails/CampCupid?project=3",
       "externalLinks": [
         { "label": "Game GitHub", "url": "https://github.com/compactcola/camp_cupid" },
         { "label": "Bow GitHub", "url": "https://github.com/FacioErgoSum/Alt-Arcade-2025" }
@@ -28,30 +41,17 @@
       "thumbnail": "/resources/projects/Datura/daturaPhoneMockup.png",
       "photo": "/resources/projects/Datura/daturaPhoneMockup.png",
       "video": "/resources/projects/Datura/daturaVideo.mp4",
-      "link": "/projectDetails/Datura.html?project=2",
+      "link": "/projectDetails/Datura?project=4",
       "externalLinks": [
         { "label": "GitHub", "url": "https://github.com/jtghchau/Datura" },
         { "label": "Visit Datura's Live Site", "url": "https://datura.onrender.com/" }
     ]
     },
     {
-      "title": "Sleep Vitamin Packaging | Product Design",
-      "description": "My take on a fun packaging design for a sleep vitamin product, focused on appealing visuals, colors, and readable typography.",
-      "thumbnail": "/resources/projects/SleepVitamins/packageMockup.png",
-      "photo": "/resources/projects/SleepVitamins/packageMockup.png",
-      "link": "/projectDetails/SleepVitamins.html?project=3"
-    },
-    {
       "title": "Oasis Dental Window Graphic | Design",
       "description": "A custom cartoon surfing tooth illustration for Oasis Dental, which was turned into a large window graphic displayed at the entrance of their office.",
       "thumbnail": "/resources/projects/OasisDental/OasisDentalBuilding.jpg",
       "photo": "/resources/projects/OasisDental/OasisDentalBuilding.jpg",
-      "link": "/projectDetails/OasisDental.html?project=4"
-    },
-    {
-      "title": "Colorado Symphony Poster Mailer | Design",
-      "description": "An informational poster mailer for Colorado Symphony's 2025 concert schedule.",
-      "thumbnail": "/resources/projects/ColoradoSymphony/posterMailerFront.png",
-      "link": "/projectDetails/ColoradoSymphony.html?project=5"
+      "link": "/projectDetails/OasisDental?project=5"
     }
   ]
